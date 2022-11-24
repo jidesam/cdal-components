@@ -2,3 +2,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+  font-family: "Avenir-Black";
+  src: url("assets/fonts/AvenirLTStd-Black.otf");
+}
+
+@font-face {
+  font-family: "Avenir-Book";
+  src: url("assets/fonts/AvenirLTStd-Book.otf");
+}
+
+@font-face {
+  font-family: "Avenir-Roman";
+  src: url("assets/fonts/AvenirLTStd-Roman.otf");
+}
+
+
+.font-avenir-black {
+  font-family: "Avenir-Black" !important;
+}
+
+.font-avenir-book {
+  font-family: "Avenir-Book" !important;
+}
+
+.font-avenir-roman {
+  font-family: "Avenir-Roman" !important;
+}
