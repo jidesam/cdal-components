@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
+
 
 const routes: Routes = [
-  {path: 'header', component: HeaderComponent},
+  
+  { path: '', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
+  { path: 'main', loadChildren: () => import('./main/main.module').then(m => m.MainModule) }
 ];
 
 @NgModule({
