@@ -1,0 +1,11 @@
+
+<button (click)="handleClick()" [disabled]="disabled" class="flex align-center"
+[ngClass]="[overRideButtonClass ? getCustomClass : 'align-center']">
+
+
+<ng-content #body></ng-content>
+<div class="flex items-center gap-2 mx-auto">
+<span><img src="{{ buttonImage }}" class=""></span>
+<span>{{ buttonText }} </span>
+</div>
+</button>
