@@ -1,0 +1,20 @@
+<div class=" flex flex-col p-12">
+  <div class="mb-4">
+    <p></p>
+  </div>
+  <div class="flex justify-center item-center p-24 w-[80%] mx-auto border border-gray-300  rounded-md">
+    <div class="flex items-center text-center flex-col py-4 px-4 font-avenir-book">
+      <img class="my-2" src="assets/Images/my-request/chat-icon.svg" alt="">
+      <div class="mb-12">
+        <p class="py-1 text-primaryBlue text-lg">No Request to show</p>
+        <p class="text-grayscaleBody text-base">You are yet to make a request for customer data</p>
+      </div>
+
+      <app-app-btn [overRideButtonClass]="true"
+        [customClass]="'text-base text-offWhite py-3 px-6 bg-primaryBlue rounded-[10px]'" [buttonImage]="''"
+        [buttonText]="'New Request'" (buttonClick)="''">
+
+      </app-app-btn>
+    </div>
+  </div>
+</div>
