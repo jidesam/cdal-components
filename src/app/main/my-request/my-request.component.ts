@@ -16,7 +16,7 @@ export class MyRequestComponent implements OnInit {
   }
 
   newRequest(){
-  this.router.navigateByUrl (`main/request-customer-data`)
+  this.router.navigateByUrl(`main/request-customer-data`)
   }
 
 }

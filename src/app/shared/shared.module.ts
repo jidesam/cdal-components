@@ -8,6 +8,7 @@ import { ApplicationInputComponent } from './components/application-input/applic
 import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -21,7 +22,9 @@ import { ReactiveFormsModule, FormsModule} from '@angular/forms';
     CommonModule,
     FormsModule,
     ReactiveFormsModule
+    
   ],
+ 
   exports: [
     HeaderComponent,
     AsideComponent,
