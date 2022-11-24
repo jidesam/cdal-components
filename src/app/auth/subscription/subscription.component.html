@@ -1,0 +1,22 @@
+<!-- <app-header></app-header> -->
+<div class="w-full bg-[#D1D1D4] px-32 py-8">
+    <div>
+        <div class="text-[#0039A6] text-[32px] leading-[40px] font-[800]"> Subscription Plans</div>
+        <div class="mt-4">
+            <div class="text-base leading-6 font-[400] text-[#4B5466]"> To access this service you would need an active subscription plan. </div>
+            <div class="text-base leading-6 font-[400] text-[#4B5466]"> Choose a plan that fit your business needs and make payment. </div>
+        </div>
+
+        <div class="mt-8">
+            <div class="grid grid-cols-3 gap-6">
+                <div> <app-sub-card amount="10,000" plan="Basic Plan" [benefits]="benefits"></app-sub-card> </div>
+                <div> <app-sub-card amount="20,000" plan="Standard Plan" [hasFeature]="true" [benefits]="standardBenefits"></app-sub-card> </div>
+                <div> <app-sub-card amount="50,000" plan="Premium Plan" [benefits]="premiumBenefits"></app-sub-card> </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-8">
+        <div class="text-[#4B5466] font-[400] text-base leading-6 w-[50%]"> Note that, depending on the plan chosen, specific terms and conditions apply. <span class="text-[#0039A6]">Read more here</span></div>
+    </div>
+</div>

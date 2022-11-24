@@ -1,0 +1,31 @@
+<div class="bg-[#D1D1D4] px-32 py-6">
+    <div class=" flex items-center space-x-2">
+        <span> <img src="assets/Images/back-arrow.png" alt=""> </span>
+        <span class="text-[#4B5466] text-[14px] font-[500] leading-[22px]"> Back </span>
+    </div>
+    <div class="w-[55%] mx-auto bg-[#FFFFFF] rounded-[16px] p-12">
+        <div class="flex justify-center">
+            <div>
+                <img src="assets/Images/CDAL Logo_2.svg" class="mx-auto" alt="">
+                <div class="my-2 text-[#4B5466] text-2xl leading-8 font-[500] text-center">admin@renmoney.com</div>
+                <div class="text-[#0039A6] my-2 text-2xl leading-8 font-[800] text-center">₦ 10,000</div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 border border-[#EFF2F6] mt-8">
+            <div (click)="selectPayWithCard()" class="py-4  text-base leading-6  text-center border cursor-pointer border-[#EFF2F6]" [ngClass]="payWithCard? 'text-[#0039A6] bg-[#EBF2FE] font-[800]' : 'text-[#6E7A91] bg-[white]'"> Pay with Card </div>
+            <div (click)="selectPayWithTransfer()" class="py-4  text-base leading-6  text-center border cursor-pointer border-[#EFF2F6]" [ngClass]="payWithTransfer? 'text-[#0039A6] bg-[#EBF2FE] font-[800]' : 'text-[#6E7A91] bg-[white]'"> Pay by Bank Transfer</div>
+        </div>
+
+        <ng-container>
+            <div>
+                <form>
+                    <div>
+                        <label for="" class="text-base leading-6 font-[400] text-[#6E7A91]"> Card  Number </label>
+                        
+                    </div>
+                </form>
+            </div>
+        </ng-container>
+    </div>
+</div>
