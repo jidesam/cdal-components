@@ -12,6 +12,8 @@ export class ExistingUsersComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  
   customerDetails = [
     {
       index: 1,
