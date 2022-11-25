@@ -8,6 +8,7 @@ import { UpgradePlanComponent } from './upgrade-plan/upgrade-plan.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent , children:[
+      { path: '', component: ExistingUsersComponent},
      { path: 'my-request', component: MyRequestComponent },
     { path: 'request-customer-data', component: RequestCustomerDataComponent},
     {path:'existing-users', component: ExistingUsersComponent},
