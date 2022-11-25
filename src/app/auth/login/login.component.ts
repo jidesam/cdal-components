@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   }
   initLoginForm(){
     this.loginAuth = new FormGroup ({
-      password: new FormControl ('', [Validators.required, Validators.minLength(4)]),
+      password: new FormControl ('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
     })
   }
