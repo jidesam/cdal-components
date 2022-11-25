@@ -5,9 +5,12 @@ import { MyRequestComponent } from './my-request/my-request.component';
 import { RequestCustomerDataComponent } from './request-customer-data/request-customer-data.component';
 
 const routes: Routes = [
-  { path: '', component: MainComponent },
+  { path: '', component: MainComponent, 
+children : [
   { path: 'my-request', component: MyRequestComponent },
   { path: 'request-customer-data', component: RequestCustomerDataComponent}
+] },
+  
 ];
 
 
