@@ -37,7 +37,7 @@
                     </div>
 
                     <div class="mt-8">
-                        <app-app-btn [overRideButtonClass]="true" [disabled]="paymentForm.invalid"  [customClass]="'w-full text-base leading-6 font-[500] text-[#FCFCFC] flex justify-center bg-[#0039A6] rounded-[12px] text-center py-4 px-4'" [buttonText]="paymentBtnText"></app-app-btn>
+                        <app-app-btn [overRideButtonClass]="true" (buttonClick)="paymentSuccess()" [disabled]="paymentForm.invalid"  [customClass]="'w-full text-base leading-6 font-[500] text-[#FCFCFC] flex justify-center bg-[#0039A6] rounded-[12px] text-center py-4 px-4'" [buttonText]="paymentBtnText"></app-app-btn>
                     </div>
                 </form>
             </div>
