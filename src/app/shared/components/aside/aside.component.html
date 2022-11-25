@@ -1,15 +1,15 @@
 <div class="w-full flex flex-col  pt-12  border border-solid border-l-0 border-b-0 border-t-0 justify-between h-[85vh]">
     <div>
-        <div class="" [ngClass]="requestLink.isActive? 'border-l-4 border-[#0039A6] ' :''  " [routerLinkActiveOptions]="{exact:true}" routerLinkActive #requestLink="routerLinkActive" routerLink="/main">
+        <div class="" [ngClass]="requestLink.isActive? 'border-l-4 border-[#0039A6] ' :''  " [routerLinkActiveOptions]="{exact:true}" routerLinkActive #requestLink="routerLinkActive" routerLink="/main/my-request">
        <div class="flex gap-4 lg:ml-10 cursor-pointer px-4 py-4 mr-4" [ngClass]="requestLink.isActive? 'bg-[#F8F9FB]  rounded-md  ':''">
          <img [src]= " requestLink.isActive? 'assets/Images/bullet active.svg':'assets/Images/bullect inactive.svg' "   alt="">
-        <div [ngClass]="requestLink.isActive? 'text-[#0039A6]' : ''" class="">My request</div>
+        <div [ngClass]="requestLink.isActive? 'text-[#0039A6] font-avenir-book' : ''" class="">My request</div>
        </div>
     </div>
      <div class=""[ngClass]="managePlanLink.isActive? 'border-l-4 border-[#0039A6]' :''" [routerLinkActiveOptions]="{exact:true}" routerLinkActive #managePlanLink="routerLinkActive" routerLink="/main/existing-users">
-        <div class="flex gap-4 mt-8 lg:ml-10 cursor-pointer px-4 py-4 mr-4" [ngClass]="managePlanLink.isActive? 'bg-[#F8F9FB]  rounded-md ':''" >
+        <div class="flex gap-4 mt-4 lg:ml-10 cursor-pointer px-4 py-4 mr-4" [ngClass]="managePlanLink.isActive? 'bg-[#F8F9FB]  rounded-md ':''" >
          <img [src]= " managePlanLink.isActive? 'assets/Images/bullet active.svg':'assets/Images/bullect inactive.svg' "   alt="">
-           <div [ngClass]="managePlanLink.isActive? 'text-[#0039A6]':''">Manage plan</div>
+           <div [ngClass]="managePlanLink.isActive? 'text-[#0039A6] font-avenir-book ':''">Manage plan</div>
         </div>
         </div>
     </div>
@@ -21,9 +21,9 @@
     </div>
     <hr class="w-[70%] py-4 flex mx-[auto] ">
     <div class=" w-[65%] flex-flex-col gap-2 mx-[auto] rounded-2xl bg-[#EBF2FE] py-4 px-2 mb-8">
-        <p class="text-[#067306]  text-center bg-[#EAF9DE] w-fit flex mx-[auto] text-sm py-2">Active</p>
-        <p class="text-center font-[500] text-lg">BASIC PLAN</p>
-        <p class="text-center text-[#6E7A91] pb-4">20 request left</p>
+        <p class="text-[#067306]  text-center bg-[#EAF9DE] w-fit flex mx-[auto] text-sm py-2 font-avenir-book">Active</p>
+        <p class="text-center font-[500] text-lg font-avenir-book">BASIC PLAN</p>
+        <p class="text-center text-[#6E7A91] pb-4 font-avenir-book">20 request left</p>
         <app-app-btn
         [buttonText]="'Upgrade'"
         [overRideButtonClass]="true"

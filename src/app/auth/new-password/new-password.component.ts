@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {PasswordValidator} from './validator'
 
 @Component({
   selector: 'app-new-password',
@@ -23,7 +24,7 @@ export class NewPasswordComponent implements OnInit {
     this.passwordChange = new FormGroup ({
       newPassword: new FormControl ('', [Validators.required, Validators.minLength(4)]),
       confirmPassword: new FormControl ('', [Validators.required, Validators.minLength(4)])
-    })
+    }, {validators: PasswordValidator})
   }
   savePassword() {
    
