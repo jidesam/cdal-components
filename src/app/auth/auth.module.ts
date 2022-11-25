@@ -3,15 +3,27 @@ import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { AuthComponent } from './auth.component';
+import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { EmailSentComponent } from './email-sent/email-sent.component';
+import { NewPasswordComponent } from './new-password/new-password.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
   declarations: [
-    AuthComponent
+    AuthComponent,
+    LoginComponent,
+    ForgotPasswordComponent,
+    EmailSentComponent,
+    NewPasswordComponent
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    ReactiveFormsModule,
+    SharedModule
   ]
 })
 export class AuthModule { }
