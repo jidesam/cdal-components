@@ -1,4 +1,6 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+import { Status } from 'src/app/types/index.types';
+
 
 @Component({
   selector: 'app-app-btn',
@@ -14,6 +16,9 @@ export class AppBtnComponent implements OnInit {
   @Input() overRideButtonClass!: boolean;
   @Input() loading!: boolean;
   @Input() customClass!: string;
+  @Input() buttonImage2!: string;
+
+
 
   @Output() ngClass!: string;
   @Output() buttonClick = new EventEmitter<boolean>();
@@ -29,5 +34,9 @@ export class AppBtnComponent implements OnInit {
 
   handleClick(){
     this.buttonClick.emit(true)
+  }
+
+  get buttonIsDisabled(): boolean {
+    return this.disabled || this.status === Status.LOADING;
   }
 }
