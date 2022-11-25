@@ -1,0 +1,81 @@
+<app-header></app-header>
+<div class="bg-[#F8F9FB] px-32 py-6">
+    <div class=" flex items-center space-x-2 cursor-pointer" (click)="back()">
+        <span> <img src="assets/Images/back-arrow.png" alt=""> </span>
+        <span class="text-[#4B5466] text-[14px] font-[500] leading-[22px]"> Back </span>
+    </div>
+    <div class="w-[55%] mx-auto bg-[#FFFFFF] rounded-[16px] p-12">
+        <div class="flex justify-center">
+            <div>
+                <img src="assets/Images/CDAL Logo_2.svg" class="mx-auto" alt="">
+                <div class="my-2 text-[#4B5466] text-2xl leading-8 font-[500] text-center">admin@renmoney.com</div>
+                <div class="text-[#0039A6] my-2 text-2xl leading-8 font-[800] text-center">{{planAmount}}</div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 border border-[#EFF2F6] mt-8">
+            <div (click)="selectPayWithCard()" class="py-4  text-base leading-6  text-center border cursor-pointer border-[#EFF2F6]" [ngClass]="payWithCard? 'text-[#0039A6] bg-[#EBF2FE] font-[800]' : 'text-[#6E7A91] bg-[white]'"> Pay with Card </div>
+            <div (click)="selectPayWithTransfer()" class="py-4  text-base leading-6  text-center border cursor-pointer border-[#EFF2F6]" [ngClass]="payWithTransfer? 'text-[#0039A6] bg-[#EBF2FE] font-[800]' : 'text-[#6E7A91] bg-[white]'"> Pay by Bank Transfer</div>
+        </div>
+
+        <ng-container *ngIf="payWithCard">
+            <div>
+                <form [formGroup]="paymentForm">
+                    <div class="mt-8">
+                        <label for="" class="text-base leading-6 font-[400] text-[#6E7A91] block mb-2"> Card  Number </label>
+                        <app-application-input type="number" [placeholder]="'0000 0000 0000 0000'" [errorMessage]="'Card Number is required!'" [control]="$any(paymentForm.get('cardNumber'))" [class]="'bg-[#EFF2F6] placeholder:text-[#A0AABD] text-[#292B2F] text-base leading-6 font-[400] px-4 py-3 rounded-[8px] border outline-none w-full'"> </app-application-input>
+                    </div>
+                    <div class="grid grid-cols-2 mt-8 gap-4">
+                        <div class="w-full">
+                            <label for="" class="text-base leading-6 font-[400] text-[#6E7A91] block mb-2"> Valid Until </label>
+                            <app-application-input  [control]="$any(paymentForm.get('expireDate'))" [errorMessage]="'This field required!'" [placeholder]="'MM / YY'" [class]="'bg-[#EFF2F6] px-4 py-3 rounded-[8px] placeholder:text-[#A0AABD] text-[#292B2F] text-base leading-6 font-[400] border outline-none w-full'"> </app-application-input>
+                        </div>
+                        <div class="w-full">
+                            <label for="" class="text-base leading-6 font-[400]  text-[#6E7A91] block mb-2"> CVV </label>
+                            <app-application-input type="number" [control]="$any(paymentForm.get('cvv'))" [errorMessage]="'This field is required!'" [placeholder]="'000 '" [class]="'bg-[#EFF2F6] px-4 py-3 placeholder:text-[#A0AABD] text-[#292B2F] text-base leading-6 font-[400] rounded-[8px] border outline-none w-full'"> </app-application-input>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <button class="w-full  text-base leading-6 font-[500] text-[#FCFCFC] bg-[#0039A6] rounded-[12px] text-center opa py-4" [ngClass]="paymentForm.invalid? 'opacity-50': 'opacity-100'" [disabled]="paymentForm.invalid"> {{paymentBtnText}} </button>
+                    </div>
+                </form>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="payWithTransfer">
+            <div class="flex justify-between items-center border-[#EFF2F6] border-b-2 mt-3 py-4">
+                <div class="text-base leading-6 font-[500] text-[#0039A6]"> Account Name: </div>
+                <div class="text-base leading-6 font-[400] text-[#4B5466]"> CDAL Bureau Corporation </div>
+            </div>
+            <div class="flex justify-between items-center border-[#EFF2F6] border-b-2 py-4">
+                <div class="text-base leading-6 font-[500] text-[#0039A6]"> Account Number: </div>
+                <div class="text-base leading-6 font-[400] text-[#4B5466]"> 0069000592 </div>
+            </div>
+            <div class="flex justify-between items-center border-[#EFF2F6] border-b-2 py-4">
+                <div class="text-base leading-6 font-[500] text-[#0039A6]"> Bank Name: </div>
+                <div class="text-base leading-6 font-[400] text-[#4B5466]"> Access (Diamond Bank) </div>
+            </div>
+            <div class="flex justify-between items-center border-[#EFF2F6] border-b-2 py-4">
+                <div class="text-base leading-6 font-[500] text-[#0039A6]"> Total Amount: </div>
+                <div class="text-base leading-6 font-[400] text-[#4B5466]"> {{planAmount}} </div>
+            </div>
+            <div class="mt-3">
+                <app-app-btn [overRideButtonClass]="true" [customClass]="'w-full text-base leading-6 font-[500] text-[#FCFCFC] bg-[#0039A6] rounded-[12px] text-center py-4'" [buttonText]="'I have made this Bank Transfer '"></app-app-btn>
+            </div>
+        </ng-container>
+    </div>
+
+    <div class="flex justify-center mt-8">
+        <div>
+            <div class="flex space-x-4 items-center">
+                <div> <img src="assets/Images/padlock.png" alt=""> </div>
+                <div class="text-lg leading-8 font-[500] text-[#6E7A91]">Secured by Paystack</div>
+            </div>
+            <div class="flex justify-center mt-4 cursor-pointer">
+                <div class="border border-[#6E7A91] px-4 py-2 text-[#6E7A91] text-base leading-8 rounded-3xl">
+                    What is Paystack
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

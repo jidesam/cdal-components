@@ -1,0 +1,25 @@
+<div class="w-full  rounded-[24px] p-8 shad card-shadow" [ngClass]="hasFeature? 'bg-[#0039A6]' : 'bg-[#FCFCFC]'">
+    <div class="flex" *ngIf="hasFeature">
+        <div class="mb-4 bg-[#EFF2F6] text-[#4B5466] font-[700] p-2 rounded-lg text-xs leading-[22px]">
+            FEATURED
+        </div>
+    </div>
+    <div> <div class="text-[32px] leading-[40px] font-[800]" [ngClass]="hasFeature? 'text-[#FCFCFC]' : 'text-[#232A38] '">N{{amount}}<span class="text-lg leading-6 font-[500]" [ngClass]="hasFeature? 'text-[#FCFCFC]' : 'text-[#4B5466] '">/month</span> </div></div>
+    <div class="mt-6 mb-2">
+        <div class="text-2xl leading-8 font-[400] " [ngClass]="hasFeature? 'text-[#FCFCFC]' : 'text-[#232A38] '"> {{plan}} </div>
+        <div class="mt-4 leading-6 text-base font-[500]" [ngClass]="hasFeature? 'text-[#FCFCFC]' : 'text-[#4B5466] '"> What you get:</div>
+    </div>
+    <hr class="bg-[#D9DFE9] h-[2px]">
+
+    <div class="my-2 pr-16 py-4" >
+        <div class="flex items-center space-x-3  my-3" *ngFor="let benefit of benefits">
+            <img src="assets/Images/mark.png" class="rotate-9" alt="">
+            <div class="text-lg leading-6 font-[500]" [ngClass]="hasFeature? 'text-[#FCFCFC]' : 'text-[#4B5466] '">{{benefit}} </div>
+        </div>
+    </div>
+
+    <button (click)="handleClick()" class="w-full rounded-xl  text-center py-4 text-base leading " [ngClass]="hasFeature? 'bg-[#FCFCFC] text-[#0039A6]' : 'bg-[#0039A6] text-[#FCFCFC]'">
+        Buy Plan
+    </button>
+
+</div>

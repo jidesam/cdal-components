@@ -6,6 +6,7 @@ import { MainComponent } from './main.component';
 import { SharedModule } from '../shared/shared.module';
 import { MyRequestComponent } from './my-request/my-request.component';
 import { RequestCustomerDataComponent } from './request-customer-data/request-customer-data.component';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { ExistingUsersComponent } from './existing-users/existing-users.component';
 
 @NgModule({
@@ -18,7 +19,9 @@ import { ExistingUsersComponent } from './existing-users/existing-users.componen
   imports: [
     CommonModule,
     MainRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class MainModule { }

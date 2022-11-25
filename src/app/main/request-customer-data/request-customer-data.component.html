@@ -1,20 +1,96 @@
-<div class=" flex flex-col p-12">
-  <div class="mb-4">
-    <p></p>
+<div class="flex flex-col p-12 bg-[#f8f9fb] font-avenir-book">
+  <div class="mb-6">
+    <p class="py-1 text-primaryBlue text-lg">Request Customer data</p>
+    <p class="text-grayscaleBody text-base">Enter below only correct and verifiable customer basic information. </p>
   </div>
-  <div class="flex justify-center item-center p-24 w-[80%] mx-auto border border-gray-300  rounded-md">
-    <div class="flex items-center text-center flex-col py-4 px-4 font-avenir-book">
-      <img class="my-2" src="assets/Images/my-request/chat-icon.svg" alt="">
-      <div class="mb-12">
-        <p class="py-1 text-primaryBlue text-lg">No Request to show</p>
-        <p class="text-grayscaleBody text-base">You are yet to make a request for customer data</p>
-      </div>
+  <div class="flex lg:p-12 md:p-6 p-4 w-[95x%] mx-auto border border-gray-300 rounded-md bg-white lg:max-w-[736px]">
+        <div class="flex flex-col">
+          <div class="md:mb-8 mb-5">
+            <p class="text-primaryBlue text-lg">New Request</p>
+            <p class="text-grayscaleBody text-base">Customer Information</p>
+          </div>
+          <form [formGroup]="newRequestForm" class="">
+          <div class="grid grid-cols-2 lg:gap-x-8 gap-x-4">
+            <div class="md:mb-8">
+              <label for="" class="block tracking-wide text-grey-icon lg:text-base text-sm mb-2">Bank Verification Number (BVN)<span class="text-red-500">&nbsp;* </span></label>
+              <app-application-input [class]="'lg:text-base text-sm placeholder:text-[#A0AABD] h-8 border border-grey-line outline-none rounded-lg bg-[#EFF2F6] w-full lg:w-[312px] p-5 pb-7 pt-7 focus:outline-none'"
+              [placeholder]="'Bank Verification Number (BVN)'" [type]="'number'"
+              [control]="$any(newRequestForm.get('bankVerificationNumber'))" [errorMessage]="'This is Required'" [required]="true">
 
-      <app-app-btn [overRideButtonClass]="true"
-        [customClass]="'text-base text-offWhite py-3 px-6 bg-primaryBlue rounded-[10px]'" [buttonImage]="''"
-        [buttonText]="'New Request'" (buttonClick)="''">
+              </app-application-input>
+            </div>
+            <div class="md:mb-8">
+              <label for="" class="block tracking-wide text-grey-icon lg:text-base text-sm mb-2">Phone Number <span class="text-red-500">&nbsp;* </span></label>
+              <app-application-input [class]="'lg:text-base text-sm placeholder:text-[#A0AABD] h-8 border border-grey-line outline-none rounded-lg bg-[#EFF2F6] w-full p-5 py-7 focus:outline-none'"
+              [placeholder]="'Phone Number'" [type]="'text'"
+              [control]="$any(newRequestForm.get('phoneNumber'))" [errorMessage]="'This is Required'" [required]="true">
 
-      </app-app-btn>
-    </div>
+              </app-application-input>
+            </div>
+            <div class="md:mb-8">
+              <label for="" class="block tracking-wide text-grey-icon lg:text-base text-sm mb-2">First Name <span class="text-red-500">&nbsp;* </span></label>
+              <app-application-input [class]="'lg:text-base text-sm placeholder:text-[#A0AABD] h-8 border border-grey-line outline-none rounded-lg bg-[#EFF2F6] w-full p-5 py-7 focus:outline-none'"
+              [placeholder]="'Customer First Name'" [type]="'text'"
+              [control]="$any(newRequestForm.get('firstName'))" [errorMessage]="'This is Required'" [required]="true">
+
+              </app-application-input>
+            </div>
+            <div class="md:mb-8">
+              <label for="" class="block tracking-wide text-grey-icon lg:text-base text-sm mb-2">Middle Name <span class="text-red-500">&nbsp;* </span></label>
+              <app-application-input [class]="'lg:text-base text-sm placeholder:text-[#A0AABD] h-8 border border-grey-line outline-none rounded-lg bg-[#EFF2F6] w-full p-5 py-7 focus:outline-none'"
+              [placeholder]="'Customer middle name'" [type]="'text'"
+              [control]="$any(newRequestForm.get('middleName'))" [errorMessage]="'This is Required'" [required]="true">
+
+              </app-application-input>
+            </div>
+            <div class="md:mb-8">
+              <label for="" class="block tracking-wide text-grey-icon lg:text-base text-sm mb-2">Last Name <span class="text-red-500">&nbsp;* </span></label>
+              <app-application-input [class]="'lg:text-base text-sm placeholder:text-[#A0AABD] h-8 border border-grey-line outline-none rounded-lg bg-[#EFF2F6] w-full p-5 py-7 focus:outline-none'"
+              [placeholder]="'Customer last name'" [type]="'text'"
+              [control]="$any(newRequestForm.get('lastName'))" [errorMessage]="'This is Required'" [required]="true">
+
+              </app-application-input>
+            </div>
+            <div class="md:mb-8">
+              <label for="" class="block tracking-wide text-grey-icon lg:text-base text-sm mb-2">Email Address <span class="text-red-500"> &nbsp;* </span></label>
+              <app-application-input [class]="'lg:text-base text-sm placeholder:text-[#A0AABD] h-8 border border-grey-line outline-none rounded-lg bg-[#EFF2F6] w-full p-5 py-7 focus:outline-none'"
+              [placeholder]="'Enter a valid Email address'" [type]="'text'"
+              [control]="$any(newRequestForm.get('emailAddress'))" [errorMessage]="'This is Required'" [required]="true">
+
+              </app-application-input>
+            </div>
+            <div class="md:mb-8">
+              <p class="mb-4 text-base"> Information has been requested for  <span class="text-red-500"> * </span> </p>
+              <div>
+                <label>
+                  <input class="radio" type="radio" #statementOfAccount value="1" formControlName="statementOfAccount"
+                    id="StatementOfAccount">
+                  <span for="StatementOfAccount" class="radio-label">
+                    Statement of Account
+                  </span>
+                </label>
+              </div>
+              <div class="">
+                <label for="accountBalance">
+                  <input type="radio" #accountBalance type="radio" value="1" id="accountBalance" formControlName="accountBalanceInfo"/>
+                  <span class="radio-label">Account Balance Information</span>
+                </label>
+              </div>
+            </div>
+            <div class="md:mb-8">
+              <label for="" class="block tracking-wide text-grey-icon lg:text-base text-sm mb-2">For how long customer data is required for? <span class="text-red-500"> &nbsp;* </span></label>
+              <app-application-input [class]="'lg:text-base text-sm placeholder:text-[#A0AABD] h-8 border border-grey-line outline-none rounded-lg bg-[#EFF2F6] w-full p-5 py-7 focus:outline-none'"
+              [placeholder]="'Enter a valid Email address'" [type]="'date'"
+              [control]="$any(newRequestForm.get('emailAddress'))" [errorMessage]="'This is Required'" [required]="true">
+
+              </app-application-input>
+            </div>
+            <div class="flex justify-end col-span-2">
+              <app-app-btn [overRideButtonClass]="true" [disabled]="newRequestForm.invalid"  [customClass]="'w-full text-base leading-6 font-[500] text-[#FCFCFC] bg-[#0039A6] rounded-[12px] text-center py-4 px-4'" [buttonText]="'Submit Request'"></app-app-btn>
+            </div>
+          </div>
+        </form>
+        
+        </div>
   </div>
 </div>
