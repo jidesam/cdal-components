@@ -12,6 +12,7 @@ import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AuthHeaderComponent } from './components/auth-header/auth-header.component';
 import { LoginInputComponent } from './login-input/login-input.component';
+import { UpgradePlanCardComponent } from './components/upgrade-plan-card/upgrade-plan-card.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { LoginInputComponent } from './login-input/login-input.component';
     AppBtnComponent,
     ApplicationInputComponent,
     AuthHeaderComponent,
-    LoginInputComponent
+    LoginInputComponent,
+    UpgradePlanCardComponent
   ],
   imports: [
     CommonModule,
@@ -39,7 +41,9 @@ import { LoginInputComponent } from './login-input/login-input.component';
     AppBtnComponent,
     ApplicationInputComponent,
     AuthHeaderComponent,
-    LoginInputComponent
+    LoginInputComponent,
+    UpgradePlanCardComponent
+
   ]
 })
 export class SharedModule { }

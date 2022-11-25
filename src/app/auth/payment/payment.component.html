@@ -37,7 +37,7 @@
                     </div>
 
                     <div class="mt-8">
-                        <button class="w-full  text-base leading-6 font-[500] text-[#FCFCFC] bg-[#0039A6] rounded-[12px] text-center opa py-4" [ngClass]="paymentForm.invalid? 'opacity-50': 'opacity-100'" [disabled]="paymentForm.invalid"> {{paymentBtnText}} </button>
+                        <button (click)="paymentSuccess()" class="w-full  text-base leading-6 font-[500] text-[#FCFCFC] bg-[#0039A6] rounded-[12px] text-center opa py-4" [ngClass]="paymentForm.invalid? 'opacity-50': 'opacity-100'" [disabled]="paymentForm.invalid"> {{paymentBtnText}} </button>
                     </div>
                 </form>
             </div>
@@ -60,7 +60,7 @@
                 <div class="text-base leading-6 font-[400] text-[#4B5466]"> {{planAmount}} </div>
             </div>
             <div class="mt-3">
-                <app-app-btn [overRideButtonClass]="true" [customClass]="'w-full text-base leading-6 font-[500] text-[#FCFCFC] bg-[#0039A6] rounded-[12px] text-center py-4'" [buttonText]="'I have made this Bank Transfer '"></app-app-btn>
+                <app-app-btn [overRideButtonClass]="true" (buttonClick)="paymentSuccess()" [customClass]="'w-full text-base leading-6 font-[500] text-[#FCFCFC] bg-[#0039A6] rounded-[12px] text-center py-4'" [buttonText]="'I have made this Bank Transfer '"></app-app-btn>
             </div>
         </ng-container>
     </div>
