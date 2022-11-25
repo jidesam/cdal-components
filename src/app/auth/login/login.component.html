@@ -1,0 +1,61 @@
+<div class="grid grid-cols-2 ">
+   <div class="flex justify-center  items-center">
+     <div class="md:w-[389px]">
+        <div class="mb-12"> <img src="assets/Images/CDAL Logo_2.svg" alt=""></div>
+        <div class="mb-2.5 text-[#0039A6] text-2xl">Log in to your Dashboard</div>
+        <div class="mb-8 text-base text-[#4B5466]">Access verifiable customer financial data to make the best possible business decisions. </div>
+        <!-- form -->
+        <form [formGroup]="loginAuth" (ngSubmit)="submitLogin()" class="mb-8">
+            <div class="form-group mb-4">
+                <div class="text-base text-[#6E7A91] mb-2">
+                    <label for="">Email</label>
+                  </div>
+                <div class="relative w-full mt-2">
+                     <app-login-input [class]="' placeholder:text-[#A0AABD]  block pl-[60px] pr-[60px] outline-0 rounded-[8px] bg-[#EFF2F6] p-3 w-full'"
+                     [placeholder]="'Enter email'" [type]="'text'"
+                     [control]="$any(loginAuth.get('email'))" [errorMessage]="'Email is Required'" [required]="true">
+                     </app-login-input>
+
+                      
+                            <img class="w-6 h-6 absolute left-5 top-1/2 translate-y-[-50%] " src="assets/Images/email.svg" alt="">
+                            <img *ngIf="loginAuth.value.email?.length" class="w-4  h-4 cursor-pointer absolute right-5 top-1/2 translate-y-[-50%]" src="assets/Images/minus.svg" alt=""
+                                (click)="clearInput('email')"
+                            >
+                       
+                  </div>
+                  <small class="text-red-500 block text-ex-sm-regular mt-2 block" *ngIf="loginAuth.get('email')?.errors?.['required'] && loginAuth.get('email')?.touched">Email is required!</small>
+                  <small class="text-red-500 block text-ex-sm-regular mt-2 block" *ngIf="loginAuth.get('email')?.errors?.['email'] && loginAuth.get('email')?.touched"> Invalid Email</small>
+
+            </div>
+    
+        <div class="form-group mb-8">
+            <div class="text-base text-[#6E7A91] mb-2">
+                <label for="">Password</label>
+              </div>
+          <div>
+            <div class="relative w-full mt-2">
+                <app-login-input [class]="' placeholder:text-[#A0AABD] block pl-[60px] pr-[60px] outline-0 rounded-[8px] bg-[#EFF2F6] p-3 w-full'"
+                [placeholder]="'Enter password'" [type]="passwordType"
+                [control]="$any(loginAuth.get('password'))" [errorMessage]="'Password is Required'" [required]="true">
+                </app-login-input>
+            
+                <img class="w-6 h-6 absolute left-5 top-1/2 translate-y-[-50%]" src="assets/Images/padlock.svg" alt="">
+                <img class="w-6 h-6 cursor-pointer absolute right-5 top-1/2 translate-y-[-50%]" src='assets/Images/eye.svg' alt="" (click)="toggleEye()">
+            
+            </div>
+            <small class="text-red-500 block text-ex-sm-regular mt-2 block" *ngIf="loginAuth.get('password')?.errors?.['required'] && loginAuth.get('password')?.touched">New password is required!</small>
+            <!-- <small class="text-red-500 block text-ex-sm-regular mt-2 block" *ngIf="loginAuth.get('password')?.errors?.['minlength']">New password must not be more than 4 numbers</small> -->
+          </div>
+      </div>
+      <div class="mb-10">
+          <app-app-btn [overRideButtonClass]="true" [disabled]="loginAuth.invalid"  [customClass]="'bg-[#0039A6] w-full py-[12px] rounded-[10px] px-[24px] text-center cursor-pointer md:text-base text-white'" [buttonText]="'Login'"></app-app-btn>
+      </div>
+    </form>
+      <div class="text-[#4B5466] text-base cursor-pointer" routerLink="/forgot-password">Forgot password?</div>
+    </div>
+   </div>
+    <!-- gif -->
+    <div>
+        <img src="assets/Images/authgif.gif" class="h-screen object-cover w-full    " alt="">
+    </div>
+</div>
