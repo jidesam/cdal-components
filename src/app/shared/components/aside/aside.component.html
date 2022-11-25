@@ -25,6 +25,7 @@
         <p class="text-center font-[500] text-lg font-avenir-book">BASIC PLAN</p>
         <p class="text-center text-[#6E7A91] pb-4 font-avenir-book">20 request left</p>
         <app-app-btn
+        (buttonClick)="upgradePlan()"
         [buttonText]="'Upgrade'"
         [overRideButtonClass]="true"
         [customClass]="'bg-[#0039A6] text-[white] flex mx-auto lg:px-8 py-2 rounded-md'"></app-app-btn>
