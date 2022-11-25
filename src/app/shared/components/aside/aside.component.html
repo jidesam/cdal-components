@@ -6,8 +6,8 @@
         <div [ngClass]="requestLink.isActive? 'text-[#0039A6] font-avenir-book' : ''" class="">My request</div>
        </div>
     </div>
-     <div class=""[ngClass]="managePlanLink.isActive? 'border-l-4 border-[#0039A6]' :''" [routerLinkActiveOptions]="{exact:true}" routerLinkActive #managePlanLink="routerLinkActive" routerLink="/main/existing-users">
-        <div class="flex gap-4 mt-4 lg:ml-10 cursor-pointer px-4 py-4 mr-4" [ngClass]="managePlanLink.isActive? 'bg-[#F8F9FB]  rounded-md ':''" >
+     <div class=""[ngClass]="managePlanLink.isActive? 'border-l-4 border-[#0039A6]' :''" [routerLinkActiveOptions]="{exact:true}" routerLinkActive #managePlanLink="routerLinkActive" routerLink="/main/upgrade-plan">
+        <div class="flex gap-4 mt-8 lg:ml-10 cursor-pointer px-4 py-4 mr-4" [ngClass]="managePlanLink.isActive? 'bg-[#F8F9FB]  rounded-md ':''" >
          <img [src]= " managePlanLink.isActive? 'assets/Images/bullet active.svg':'assets/Images/bullect inactive.svg' "   alt="">
            <div [ngClass]="managePlanLink.isActive? 'text-[#0039A6] font-avenir-book ':''">Manage plan</div>
         </div>
@@ -15,16 +15,17 @@
     </div>
 
     <div>
-        <div class="flex lg:pl-12 pl-4 items-end gap-4 pb-4">
+        <div class="flex lg:pl-12 pl-4 items-end gap-4 pb-4 cursor-pointer">
         <img src="assets/Images/logOut.svg" alt="">
         <p>Logout</p>
     </div>
     <hr class="w-[70%] py-4 flex mx-[auto] ">
     <div class=" w-[65%] flex-flex-col gap-2 mx-[auto] rounded-2xl bg-[#EBF2FE] py-4 px-2 mb-8">
-        <p class="text-[#067306]  text-center bg-[#EAF9DE] w-fit flex mx-[auto] text-sm py-2 font-avenir-book">Active</p>
+        <p class="text-[#067306] rounded-lg px-2 py-1 text-center bg-[#EAF9DE] w-fit flex mx-[auto] text-sm py-2 font-avenir-book">Active</p>
         <p class="text-center font-[500] text-lg font-avenir-book">BASIC PLAN</p>
         <p class="text-center text-[#6E7A91] pb-4 font-avenir-book">20 request left</p>
         <app-app-btn
+        (buttonClick)="upgradePlan()"
         [buttonText]="'Upgrade'"
         [overRideButtonClass]="true"
         [customClass]="'bg-[#0039A6] text-[white] flex mx-auto lg:px-8 py-2 rounded-md'"></app-app-btn>

@@ -79,6 +79,11 @@
             </div>
             <div class="md:mb-8">
               <label for="" class="block tracking-wide text-grey-icon lg:text-base text-sm mb-2">For how long customer data is required for?</label>
+              <app-application-input [class]="'lg:text-base text-sm placeholder:text-[#A0AABD] h-8 border border-grey-line outline-none rounded-lg bg-[#EFF2F6] w-full p-5 py-7 focus:outline-none'"
+              [placeholder]="'Enter a valid Email address'" [type]="'date'"
+              [control]="$any(newRequestForm.get('emailAddress'))" [errorMessage]="'This is Required'" [required]="true">
+
+              </app-application-input>
               <!-- <mat-form-field appearance="fill">
                 <mat-label>Enter a date range</mat-label>
                 <mat-date-range-input [rangePicker]="picker">

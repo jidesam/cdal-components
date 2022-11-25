@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import {PasswordValidator} from './validator'
+import { Router } from '@angular/router';
+import { PasswordValidator} from './validator'
 
 @Component({
   selector: 'app-new-password',
@@ -15,7 +16,7 @@ export class NewPasswordComponent implements OnInit {
   passwordImgUrl2 = 'assets/Images/eye.svg';
   passwordChange!: FormGroup
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
     this.initNNewPasswordForm()
@@ -30,6 +31,11 @@ export class NewPasswordComponent implements OnInit {
    
   }
 
+  newPasswordNavigate(){
+    if (this.passwordChange.valid) {
+      this.route.navigateByUrl('/login')
+    }
+  }
   toggleEye1() {
     if (this.passwordType1 === 'password') {
       this.passwordType1 = 'text';

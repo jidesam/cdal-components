@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-manage-plan',
-  templateUrl: './manage-plan.component.html',
-  styleUrls: ['./manage-plan.component.scss']
+  selector: 'app-upgrade-plan',
+  templateUrl: './upgrade-plan.component.html',
+  styleUrls: ['./upgrade-plan.component.scss']
 })
-export class ManagePlanComponent implements OnInit {
+export class UpgradePlanComponent implements OnInit {
   benefits = [
     "10 Account Statement request ",
     "5 Balance Enquiry"
@@ -21,9 +21,12 @@ export class ManagePlanComponent implements OnInit {
     "60 Account Statement request ",
     "30 Balance Enquiry"
   ]
+  
   constructor(
     private router : Router,
+
   ) { }
+
 
   ngOnInit(): void {
   }
@@ -31,4 +34,5 @@ export class ManagePlanComponent implements OnInit {
   buyBasic(plan:string) {
     this.router.navigateByUrl(`/payment/${plan}`)
   }
+
 }

@@ -8,6 +8,7 @@ import { MyRequestComponent } from './my-request/my-request.component';
 import { RequestCustomerDataComponent } from './request-customer-data/request-customer-data.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { ExistingUsersComponent } from './existing-users/existing-users.component';
+import { UpgradePlanComponent } from './upgrade-plan/upgrade-plan.component';
 import { ManagePlanComponent } from './manage-plan/manage-plan.component';
 // import { MatDatepickerModule} from '@angular/material/datepicker';
 import { MaterialModule } from 'src/app/material.module';
@@ -18,6 +19,7 @@ import { MaterialModule } from 'src/app/material.module';
     MyRequestComponent,
     RequestCustomerDataComponent,
     ExistingUsersComponent,
+    UpgradePlanComponent,
     ManagePlanComponent
   ],
   imports: [

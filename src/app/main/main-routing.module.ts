@@ -5,13 +5,16 @@ import { MainComponent } from './main.component';
 import { ManagePlanComponent } from './manage-plan/manage-plan.component';
 import { MyRequestComponent } from './my-request/my-request.component';
 import { RequestCustomerDataComponent } from './request-customer-data/request-customer-data.component';
+import { UpgradePlanComponent } from './upgrade-plan/upgrade-plan.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent , children:[
     { path: 'my-request', component: MyRequestComponent },
     { path: 'request-customer-data', component: RequestCustomerDataComponent },
     { path:'existing-users', component: ExistingUsersComponent },
-    { path: 'manage-plan', component: ManagePlanComponent }
+    { path: 'manage-plan', component: ManagePlanComponent },
+
+    {path: 'upgrade-plan', component: UpgradePlanComponent}
   ]}
  
 ];
