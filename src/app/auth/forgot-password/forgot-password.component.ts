@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-forgot-password',
@@ -9,7 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class ForgotPasswordComponent implements OnInit {
 
   resetPassword!: FormGroup
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
     this.initForgotPasswordForm()
@@ -21,6 +22,11 @@ export class ForgotPasswordComponent implements OnInit {
   }
   forgotPassword(){
 
+  }
+  forgotAndResetPassword(){
+    if (this.resetPassword.valid) {
+      this.route.navigateByUrl('/email-sent')
+    }
   }
   clearForgotInput(controlName: string){
     this.resetPassword.patchValue({
