@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { AsideComponent } from './components/aside/aside.component';
+import { SubCardComponent } from './components/sub-card/sub-card.component';
 import { AppBtnComponent } from './components/app-btn/app-btn.component';
 import { ApplicationInputComponent } from './components/application-input/application-input.component';
 
@@ -9,14 +10,19 @@ import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 
 import { RouterModule } from '@angular/router';
+import { AuthHeaderComponent } from './components/auth-header/auth-header.component';
+import { LoginInputComponent } from './login-input/login-input.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
     AsideComponent,
+    SubCardComponent,
     AppBtnComponent,
-    ApplicationInputComponent
+    ApplicationInputComponent,
+    AuthHeaderComponent,
+    LoginInputComponent
   ],
   imports: [
     CommonModule,
@@ -29,8 +35,11 @@ import { RouterModule } from '@angular/router';
   exports: [
     HeaderComponent,
     AsideComponent,
+    SubCardComponent,
     AppBtnComponent,
-    ApplicationInputComponent
+    ApplicationInputComponent,
+    AuthHeaderComponent,
+    LoginInputComponent
   ]
 })
 export class SharedModule { }

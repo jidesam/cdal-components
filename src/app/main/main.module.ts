@@ -7,12 +7,14 @@ import { SharedModule } from '../shared/shared.module';
 import { MyRequestComponent } from './my-request/my-request.component';
 import { RequestCustomerDataComponent } from './request-customer-data/request-customer-data.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms'
+import { ExistingUsersComponent } from './existing-users/existing-users.component';
 
 @NgModule({
   declarations: [
     MainComponent,
     MyRequestComponent,
-    RequestCustomerDataComponent
+    RequestCustomerDataComponent,
+    ExistingUsersComponent
   ],
   imports: [
     CommonModule,
