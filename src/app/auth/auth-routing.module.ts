@@ -7,7 +7,7 @@ import { SubscriptionComponent } from './subscription/subscription.component';
 const routes: Routes = [
   { path: '', component: AuthComponent },
   { path: 'sub', component: SubscriptionComponent},
-  { path: 'payment', component: PaymentComponent}
+  { path: 'payment/:plan', component: PaymentComponent}
 ];
 
 @NgModule({

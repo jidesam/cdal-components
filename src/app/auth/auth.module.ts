@@ -6,6 +6,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { AuthComponent } from './auth.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { PaymentComponent } from './payment/payment.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { PaymentComponent } from './payment/payment.component';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    FormsModule,
   ]
 })
 export class AuthModule { }

@@ -1,4 +1,4 @@
-<div class="w-full  rounded-[24px] p-8" [ngClass]="hasFeature? 'bg-[#0039A6]' : 'bg-[#FCFCFC]'">
+<div class="w-full  rounded-[24px] p-8 shad card-shadow" [ngClass]="hasFeature? 'bg-[#0039A6]' : 'bg-[#FCFCFC]'">
     <div class="flex" *ngIf="hasFeature">
         <div class="mb-4 bg-[#EFF2F6] text-[#4B5466] font-[700] p-2 rounded-lg text-xs leading-[22px]">
             FEATURED
@@ -18,7 +18,7 @@
         </div>
     </div>
 
-    <button class="w-full rounded-xl  text-center py-4 text-base leading " [ngClass]="hasFeature? 'bg-[#FCFCFC] text-[#0039A6]' : 'bg-[#0039A6] text-[#FCFCFC]'">
+    <button (click)="handleClick()" class="w-full rounded-xl  text-center py-4 text-base leading " [ngClass]="hasFeature? 'bg-[#FCFCFC] text-[#0039A6]' : 'bg-[#0039A6] text-[#FCFCFC]'">
         Buy Plan
     </button>
 

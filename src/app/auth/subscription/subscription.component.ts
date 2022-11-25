@@ -1,4 +1,6 @@
+import { LocationStrategy } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-subscription',
@@ -20,9 +22,17 @@ export class SubscriptionComponent implements OnInit {
     "60 Account Statement request ",
     "30 Balance Enquiry"
   ]
-  constructor() { }
+  constructor(
+    private router : Router,
+  ) { }
   
   ngOnInit(): void {
+  }
+
+ 
+
+  buyBasic(plan:string) {
+    this.router.navigateByUrl(`/payment/${plan}`)
   }
 
 }

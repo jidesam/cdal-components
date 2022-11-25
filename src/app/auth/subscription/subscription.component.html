@@ -1,5 +1,5 @@
-<!-- <app-header></app-header> -->
-<div class="w-full bg-[#D1D1D4] px-32 py-8">
+<app-header></app-header>
+<div class="w-full bg-[#F8F9FB] px-6 lg:px-32 py-8">
     <div>
         <div class="text-[#0039A6] text-[32px] leading-[40px] font-[800]"> Subscription Plans</div>
         <div class="mt-4">
@@ -8,15 +8,15 @@
         </div>
 
         <div class="mt-8">
-            <div class="grid grid-cols-3 gap-6">
-                <div> <app-sub-card amount="10,000" plan="Basic Plan" [benefits]="benefits"></app-sub-card> </div>
-                <div> <app-sub-card amount="20,000" plan="Standard Plan" [hasFeature]="true" [benefits]="standardBenefits"></app-sub-card> </div>
-                <div> <app-sub-card amount="50,000" plan="Premium Plan" [benefits]="premiumBenefits"></app-sub-card> </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div> <app-sub-card amount="10,000" (buttonClick)="buyBasic('basic')" plan="Basic Plan" [benefits]="benefits"></app-sub-card> </div>
+                <div> <app-sub-card amount="20,000" (buttonClick)="buyBasic('standard')" plan="Standard Plan" [hasFeature]="true" [benefits]="standardBenefits"></app-sub-card> </div>
+                <div> <app-sub-card amount="50,000" (buttonClick)="buyBasic('premium')"  plan="Premium Plan" [benefits]="premiumBenefits"></app-sub-card> </div>
             </div>
         </div>
     </div>
 
     <div class="mt-8">
-        <div class="text-[#4B5466] font-[400] text-base leading-6 w-[50%]"> Note that, depending on the plan chosen, specific terms and conditions apply. <span class="text-[#0039A6]">Read more here</span></div>
+        <div class="text-[#4B5466] font-[400] text-base leading-6 w-full lg:w-[50%]"> Note that, depending on the plan chosen, specific terms and conditions apply. <span class="text-[#0039A6]">Read more here</span></div>
     </div>
 </div>
