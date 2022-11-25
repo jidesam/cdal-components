@@ -1,7 +1,8 @@
 <div class="grid grid-cols-2 ">
    <div class="flex justify-center  items-center">
-     <div class="md:w-[389px]">
-        <div class="mb-12"> <img src="assets/Images/CDAL Logo_2.svg" alt=""></div>
+     <div class="md:w-[389px] ">
+        <div class="mb-12 logoTransition"> <img src="assets/Images/CDAL Logo_2.svg" alt=""></div>
+      <div class="formTransition">
         <div class="mb-2.5 text-[#0039A6] text-2xl">Log in to your Dashboard</div>
         <div class="mb-8 text-base text-[#4B5466]">Access verifiable customer financial data to make the best possible business decisions. </div>
         <!-- form -->
@@ -48,10 +49,11 @@
           </div>
       </div>
       <div class="mb-10">
-          <app-app-btn [overRideButtonClass]="true" [disabled]="loginAuth.invalid"  [customClass]="'bg-[#0039A6] w-full py-[12px] rounded-[10px] px-[24px] text-center cursor-pointer md:text-base text-white'" [buttonText]="'Login'"></app-app-btn>
+          <app-app-btn [overRideButtonClass]="true" [disabled]="loginAuth.invalid" routerLink="/sub" [customClass]="'bg-[#0039A6] w-full py-[12px] rounded-[10px] px-[24px] text-center cursor-pointer md:text-base text-white'" [buttonText]="'Login'"></app-app-btn>
       </div>
-    </form>
-      <div class="text-[#4B5466] text-base cursor-pointer" routerLink="/forgot-password">Forgot password?</div>
+        </form>
+      <div class="text-[#4B5466] text-base border-b border-[#4B5466] w-fit cursor-pointer" routerLink="/forgot-password">Forgot password?</div>
+      </div>
     </div>
    </div>
     <!-- gif -->

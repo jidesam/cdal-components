@@ -1,0 +1,30 @@
+.logoTransition {
+    position: relative;
+    animation-name: logo;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation: mylogo 3s ;
+  }
+  
+  @keyframes logo {
+    0%   { top:-200px;}
+  }
+  @keyframes mylogo {
+    from {top: -200px;}
+    to {top: 0px;}
+  }
+  .formTransition {
+    position: relative;
+    animation-name: form;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation: myform 3s ;
+  }
+  
+  @keyframes form {
+    0%   { left:-100%;}
+  }
+  @keyframes myform {
+    from {left: -100%;}
+    to {left: 0px;}
+  }
