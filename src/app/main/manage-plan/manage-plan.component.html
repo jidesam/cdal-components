@@ -1,8 +1,45 @@
-<div class="flex font-avenir-book">
-  <div class="">
-    Basic Plan
+<div class="bg-[#f8f9fb] pt-12 px-8 flex flex-col">
+  <div class="flex font-avenir-book gap-2 rounded-[16px] bg-[white] w-fit">
+    <div class="py-4 px-6 shadow-md md:max-w-[223px]">
+      <div class="">
+        <p class="text-[24px]">Basic Plan</p>
+        <p class="text-[#067306]  text-center bg-[#EAF9DE] w-fit flex text-sm py-1 px-2 rounded-lg">Active</p>
+      </div>
+    </div>
+    <div class="py-4 px-6 shadow-md flex">
+      <div class="border-t-0 border-l-0 
+      border-r border-b-0 border-solid border-grayScale pr-12 pl-8">
+        <div class="mr-4">
+          <p class="text-[24px]">50</p>
+          <p class="text-[#003CAB] text-sm">Total Requests</p>
+        </div>
+      </div>
+      <div class="border-t-0 border-l-0 
+      border-r border-b-0 border-solid border-grayScale pr-12">
+        <div class="pl-2 mr-4">
+          <p class="text-[24px]">10</p>
+          <p class="text-[#003CAB] text-sm">Requests Left</p>
+        </div>
+      </div>
+      <div class=" pr-12">
+        <div class="pl-2 mr-4">
+          <p class="text-[24px]">Dec 20, 2022</p>
+          <p class="text-[#003CAB] text-sm">Next Renewal Date</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="">
-    <p class="text-[#067306]  text-center bg-[#EAF9DE] w-fit flex mx-[auto] text-sm py-2">Active</p>
+
+  <div class="flex flex-col mt-12">
+    <div>
+      <p class="text-[#0039A6] text-[24px]">Manage Plan</p>
+      <p class="">Choose between request plans that fit your business needs. </p>
+    </div>
+
+    <div>
+      <!-- <app-upgrade-plan-card amount="20,000" (buttonClick)="buyBasic('standard')" plan="Standard Plan" [benefits]="standardBenefits">
+
+      </app-upgrade-plan-card> -->
+    </div>
   </div>
 </div>
