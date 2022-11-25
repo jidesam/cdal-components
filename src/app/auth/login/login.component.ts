@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   // passwordImgUrl = 'assets/images/eye.svg';
   loginAuth!: FormGroup
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
     this.initLoginForm()
@@ -27,6 +28,11 @@ export class LoginComponent implements OnInit {
 
   }
 
+  subscriptionRoute(){
+    if (this.loginAuth.valid) {
+      this.route.navigateByUrl('/sub')
+    }
+  }
   toggleEye() {
     if (this.passwordType === 'password') {
       this.passwordType = 'text';
