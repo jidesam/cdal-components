@@ -12,7 +12,7 @@
     <hr class="bg-[#D9DFE9] h-[2px]">
 
     <div class="my-2 pr-16 py-4" >
-        <div class="flex items-center space-x-3  my-3" *ngFor="let benefit of benefits">
+        <div class="flex items-start space-x-3  my-3" *ngFor="let benefit of benefits">
             <img src="assets/Images/mark.png" class="rotate-9" alt="">
             <div class="text-lg leading-6 font-[500]" [ngClass]="hasFeature? 'text-[#FCFCFC]' : 'text-[#4B5466] '">{{benefit}} </div>
         </div>
