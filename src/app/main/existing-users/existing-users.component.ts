@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-existing-users',
@@ -9,7 +9,16 @@ export class ExistingUsersComponent implements OnInit {
   btnImg ='assets/Images/my-request/plus.svg'
   showSort : boolean = false
 
-  constructor() { }
+  @ViewChild('sortbyDIv') private sortbyDIv! : ElementRef
+  @ViewChild('sortBy') private sortBy! : ElementRef
+
+  constructor(private render : Renderer2) {
+    // this.render.listen('window', 'click', (e:Event)=>{
+    //   if (e.target !== this.sortbyDIv?.nativeElement && e.target !== this.sortBy?.nativeElement){
+    //     this.showSort = false
+    //   }
+    // })
+   }
 
   ngOnInit(): void {
   }

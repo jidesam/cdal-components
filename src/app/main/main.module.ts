@@ -8,6 +8,8 @@ import { MyRequestComponent } from './my-request/my-request.component';
 import { RequestCustomerDataComponent } from './request-customer-data/request-customer-data.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { ExistingUsersComponent } from './existing-users/existing-users.component';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { ExistingUsersComponent } from './existing-users/existing-users.componen
     MainRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatMenuModule
   ]
 })
 export class MainModule { }
