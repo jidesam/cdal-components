@@ -3,7 +3,7 @@
     <p class="py-1 text-primaryBlue text-lg">Request Customer data</p>
     <p class="text-grayscaleBody text-base">Enter below only correct and verifiable customer basic information. </p>
   </div>
-  <div class="flex lg:p-12 md:p-6 p-4 w-[95x%] mx-auto border border-gray-300 rounded-md bg-white lg:max-w-[736px]">
+  <div class="flex lg:px-10 lg:py-10 md:p-6 p-4 w-[95%] mx-auto border border-gray-300 rounded-md bg-white lg:max-w-[736px]">
         <div class="flex flex-col">
           <div class="md:mb-8 mb-5">
             <p class="text-primaryBlue text-lg">New Request</p>
@@ -62,9 +62,9 @@
             <div class="md:mb-8">
               <p class="mb-4 text-base"> Information has been requested for  <span class="text-red-500"> * </span> </p>
               <div>
-                <label>
+                <label for="statementOfAccount">
                   <input class="radio" type="radio" #statementOfAccount value="1" formControlName="statementOfAccount"
-                    id="StatementOfAccount">
+                    id="statementOfAccount">
                   <span for="StatementOfAccount" class="radio-label">
                     Statement of Account
                   </span>
@@ -78,7 +78,7 @@
               </div>
             </div>
             <div class="md:mb-8">
-              <label for="" class="block tracking-wide text-grey-icon lg:text-base text-sm mb-2">For how long customer data is required for? <span class="text-red-500"> &nbsp;* </span></label>
+              <label for="" class="block tracking-wide text-grey-icon lg:text-base text-sm mb-2">For how long customer data is required for?</label>
               <app-application-input [class]="'lg:text-base text-sm placeholder:text-[#A0AABD] h-8 border border-grey-line outline-none rounded-lg bg-[#EFF2F6] w-full p-5 py-7 focus:outline-none'"
               [placeholder]="'Enter a valid Email address'" [type]="'date'"
               [control]="$any(newRequestForm.get('emailAddress'))" [errorMessage]="'This is Required'" [required]="true">

@@ -9,6 +9,7 @@ import { RequestCustomerDataComponent } from './request-customer-data/request-cu
 import { FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { ExistingUsersComponent } from './existing-users/existing-users.component';
 import { UpgradePlanComponent } from './upgrade-plan/upgrade-plan.component';
+import { ManagePlanComponent } from './manage-plan/manage-plan.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UpgradePlanComponent } from './upgrade-plan/upgrade-plan.component';
     MyRequestComponent,
     RequestCustomerDataComponent,
     ExistingUsersComponent,
-    UpgradePlanComponent
+    UpgradePlanComponent,
+    ManagePlanComponent
   ],
   imports: [
     CommonModule,
