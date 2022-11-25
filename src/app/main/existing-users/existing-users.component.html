@@ -19,17 +19,17 @@
         <img src="/assets/Images/search.svg" alt="">
         <input type="text" placeholder="Search" class="border-0 outline-none bg-[#EFF2F6]">
        </div>
-       <div class="flex gap-4 items-center cursor-pointer">
-            <div class="flex gap-4 border px-2 py-2 rounded-md">
+       <div class="flex gap-4 items-center cursor-pointer relative">
+            <div class="flex gap-4 border px-2 py-2 rounded-md" #sortby (click)="showSort = !showSort">
                 <p class="text-[#003CAB]">Sort</p>
                 <img src="assets/Images/keyboard_arrow_down_24px.svg" alt="">
 
                 
-                    <ul>
-                        <li>Oldest to newest</li>
-                        <li>Newest to oldest</li>
-                        <li>Ascending Order (A-Z)</li>
-                        <li>Descending Order (Z-A)</li>
+                    <ul class="absolute bg-white rounded-xl border border-solid text-left  px-4 w-[250px] py-4" *ngIf="showSort" #sortbyDIv>
+                        <li  class="text-[#6E7A91]">Oldest to newest</li>
+                        <li  class="text-[#6E7A91]" >Newest to oldest</li>
+                        <li class="text-[#6E7A91]">Ascending Order (A-Z)</li>
+                        <li class="text-[#6E7A91]">Descending Order (Z-A)</li>
                     </ul>
                 
                 

@@ -7,13 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExistingUsersComponent implements OnInit {
   btnImg ='assets/Images/my-request/plus.svg'
+  showSort : boolean = false
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  
+
   customerDetails = [
     {
       index: 1,
