@@ -1,7 +1,7 @@
 import { LocationStrategy } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-payment',
@@ -17,7 +17,8 @@ export class PaymentComponent implements OnInit {
 
   constructor(
     private location: LocationStrategy,
-    private activatedRoute : ActivatedRoute
+    private activatedRoute : ActivatedRoute,
+    private router : Router
 
   ) { }
 
@@ -44,6 +45,10 @@ export class PaymentComponent implements OnInit {
 
   back() {
     this.location.back()
+  }
+
+  paymentSuccess() {
+    this.router.navigateByUrl('/main')
   }
 
   selectPayWithTransfer() {

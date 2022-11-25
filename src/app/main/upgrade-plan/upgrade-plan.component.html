@@ -1,0 +1,39 @@
+<div class="bg-white flex space-x-6 px-16 py-3">
+    <div class="text-[#A0AABD] text-base font-[400] leading-6 cursor-pointer">Manage Plan</div>
+    <div class="text-[#0039A6] text-base font-[400] leading-6 cursor-pointer"> Upgrade Plan </div>
+</div>
+<div class="w-full bg-[#F8F9FB] px-12  py-16">
+    <div>
+        <div class="text-[#0039A6] text-[32px] leading-[40px] font-[800]"> Upgrade Plan </div>
+        <div class="mt-2">
+            <div class="text-base leading-6 font-[400] text-[#4B5466]"> Choose a plan that fit your business needs and make payment. </div>
+        </div>
+
+        <div class="mt-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div> 
+                    <div class="w-full border-[#96BBFF] border  rounded-[24px] p-8 shad card-shadow bg-[#FCFCFC]" >
+                        <div class="text-[#292B2F] text-lg leading-[18px] font-[800] text-center mb-4"> Your Current Plan </div>
+                        <hr class="bg-[#D9DFE9] h-[2px]">
+                        <div class=" flex justify-center my-4">
+                            <div class="bg-[#EAF9DE] px-3 py-1 text-[13px] leading font-[400] text-[#067306] rounded-xl"> Active </div>
+                        </div>
+                        <div class="mt-6 mb-2">
+                            <div class="text-2xl leading-8 font-[400] text-[#232A38] "> Basic Plan </div>
+                            <div class="mt-4 leading-6 text-base font-[500] text-[#4B5466]" >A two line contextual text to explain the value proposition of this plan</div>
+                        </div>
+
+                        <div> <div class="text-[32px] leading-[40px] font-[800] text-[#232A38]" >N10,000<span class="text-lg leading-6 font-[500] text-[#4B5466]">/month</span> </div></div>
+
+                    </div>
+                </div>
+                <div> <app-upgrade-plan-card amount="20,000" (buttonClick)="buyBasic('standard')" plan="Standard Plan"  [benefits]="standardBenefits"></app-upgrade-plan-card> </div>
+                <div> <app-upgrade-plan-card amount="50,000" (buttonClick)="buyBasic('premium')"  plan="Premium Plan" [benefits]="premiumBenefits"></app-upgrade-plan-card> </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-8">
+        <div class="text-[#4B5466] font-[400] text-base leading-6 w-full lg:w-[50%]"> Note that, depending on the plan chosen, specific terms and conditions apply. <span class="text-[#0039A6] cursor-pointer">Read more here</span></div>
+    </div>
+</div>
