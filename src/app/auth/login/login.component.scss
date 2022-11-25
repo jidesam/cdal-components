@@ -1,9 +1,9 @@
 .logoTransition {
     position: relative;
     animation-name: logo;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-timing-function: ease-in;
-    animation: mylogo 3s ;
+    animation: mylogo 2s ;
   }
   
   @keyframes logo {
@@ -16,9 +16,9 @@
   .formTransition {
     position: relative;
     animation-name: form;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-timing-function: ease-in;
-    animation: myform 3s ;
+    animation: myform 2s ;
   }
   
   @keyframes form {

@@ -11,6 +11,7 @@ import { NewPasswordComponent } from './new-password/new-password.component';
   
   const routes: Routes = [
     {path: '', component: AuthComponent, children:[
+      { path: '', component: LoginComponent},
       {path: 'login', component: LoginComponent},
       { path: 'forgot-password', component: ForgotPasswordComponent},
       {path: 'email-sent', component: EmailSentComponent},

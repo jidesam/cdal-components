@@ -49,7 +49,7 @@
           </div>
       </div>
       <div class="mb-10">
-          <app-app-btn [overRideButtonClass]="true" [disabled]="loginAuth.invalid" routerLink="/sub" [customClass]="'bg-[#0039A6] w-full py-[12px] rounded-[10px] px-[24px] text-center cursor-pointer md:text-base text-white'" [buttonText]="'Login'"></app-app-btn>
+          <app-app-btn [overRideButtonClass]="true" [disabled]="loginAuth.invalid" (click)="subscriptionRoute()" [customClass]="'bg-[#0039A6] w-full py-[12px] rounded-[10px] px-[24px] text-center cursor-pointer md:text-base text-white'" [buttonText]="'Login'"></app-app-btn>
       </div>
         </form>
       <div class="text-[#4B5466] text-base border-b border-[#4B5466] w-fit cursor-pointer" routerLink="/forgot-password">Forgot password?</div>
