@@ -84,6 +84,17 @@
               [control]="$any(newRequestForm.get('emailAddress'))" [errorMessage]="'This is Required'" [required]="true">
 
               </app-application-input>
+              <!-- <mat-form-field appearance="fill">
+                <mat-label>Enter a date range</mat-label>
+                <mat-date-range-input [rangePicker]="picker">
+                  <input matStartDate placeholder="Start date">
+                  <input matEndDate placeholder="End date">
+                </mat-date-range-input>
+                <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>
+              </mat-form-field> -->
+              <!-- <mat-checkbox type="checkbox" class="custom-frame"></mat-checkbox> -->
             </div>
             <div class="flex justify-end col-span-2">
               <app-app-btn [overRideButtonClass]="true" [disabled]="newRequestForm.invalid"  [customClass]="'w-full text-base leading-6 font-[500] text-[#FCFCFC] bg-[#0039A6] rounded-[12px] text-center py-4 px-4'" [buttonText]="'Submit Request'"></app-app-btn>

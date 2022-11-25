@@ -10,6 +10,8 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { ExistingUsersComponent } from './existing-users/existing-users.component';
 import { UpgradePlanComponent } from './upgrade-plan/upgrade-plan.component';
 import { ManagePlanComponent } from './manage-plan/manage-plan.component';
+// import { MatDatepickerModule} from '@angular/material/datepicker';
+import { MaterialModule } from 'src/app/material.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,10 @@ import { ManagePlanComponent } from './manage-plan/manage-plan.component';
     MainRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MaterialModule,
+    // MatDatepickerModule,
+    
   ]
 })
 export class MainModule { }
