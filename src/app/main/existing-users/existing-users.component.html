@@ -34,12 +34,22 @@
        </div>
 
        <table  class="w-full">
-        <thead class="flex justify-between w-[90%] bg-[#D9DFE9] mr-20 px-4 py-2 rounded-md">
-            <th class="text-[#0039A6]">S/N</th>
-            <th class="text-[#0039A6]">Customer Details</th>
-            <th class="text-[#0039A6]">Data Initiated</th>
-            <th class="text-[#0039A6]">Status of Request</th>
-       </thead>
+        <th class="w-full bg-[#f8f9fb] py-4 rounded-md ">
+                <tr class="flex gap-2 items-center">
+                <td class="text-[#0039A6] w-[10%] text-left">S/N</td>
+                <td class="text-[#0039A6] w-[40%] text-left">Customer Details</td>
+                <td class="text-[#0039A6] w-[30%] text-left">Data Initiated</td>
+                <td class="text-[#0039A6] w-[20%]  text-left ">Status of Request</td>
+                </tr>
+       </th>
+       <tbody class="w-full rounded-md ">
+        <tr class="flex gap-2 items-center border-b" *ngFor="let  customer of customerDetails">
+            <td class="py-8  w-[10%]">{{customer.index}}</td>
+            <td class="w-[40%] ">{{customer.customerDetails}}</td>
+            <td class="w-[30%]">{{customer.date}}</td>
+            <td class=" bg-[#CBFFAE] text-[#067306] rounded-md text-center w-[10%]" [ngClass]="{'bg-[#FFE6B0] text-[#946300]' : customer.statusOfRequest=== 'Pending' , 'bg-[#FFABE8] text-[#9E0038]' : customer.statusOfRequest=== 'Rejected'}">{{customer.statusOfRequest}}</td>
+        </tr>
+       </tbody>
        </table>
     </div>
 </div>
