@@ -10,6 +10,8 @@ import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 
 import { RouterModule } from '@angular/router';
+import { AuthHeaderComponent } from './components/auth-header/auth-header.component';
+import { LoginInputComponent } from './login-input/login-input.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { RouterModule } from '@angular/router';
     AsideComponent,
     SubCardComponent,
     AppBtnComponent,
-    ApplicationInputComponent
+    ApplicationInputComponent,
+    AuthHeaderComponent,
+    LoginInputComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +37,9 @@ import { RouterModule } from '@angular/router';
     AsideComponent,
     SubCardComponent,
     AppBtnComponent,
-    ApplicationInputComponent
+    ApplicationInputComponent,
+    AuthHeaderComponent,
+    LoginInputComponent
   ]
 })
 export class SharedModule { }
