@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { AsideComponent } from './components/aside/aside.component';
+import { SubCardComponent } from './components/sub-card/sub-card.component';
 import { AppBtnComponent } from './components/app-btn/app-btn.component';
 import { ApplicationInputComponent } from './components/application-input/application-input.component';
 
@@ -17,6 +18,7 @@ import { LoginInputComponent } from './login-input/login-input.component';
   declarations: [
     HeaderComponent,
     AsideComponent,
+    SubCardComponent,
     AppBtnComponent,
     ApplicationInputComponent,
     AuthHeaderComponent,
@@ -33,6 +35,7 @@ import { LoginInputComponent } from './login-input/login-input.component';
   exports: [
     HeaderComponent,
     AsideComponent,
+    SubCardComponent,
     AppBtnComponent,
     ApplicationInputComponent,
     AuthHeaderComponent,
