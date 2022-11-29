@@ -48,7 +48,7 @@
        <table  class="w-full">
         <th class="w-full bg-[#f8f9fb] py-4 rounded-md ">
                 <tr class="flex gap-2 items-center">
-                <td class="text-[#0039A6] w-[10%] font-avenir-book text-left">S/N</td>
+                <td class="text-[#0039A6] w-[10%] font-avenir-book text-left pl-2">S/N</td>
                 <td class="text-[#0039A6] w-[40%] font-avenir-book text-left">Customer Details</td>
                 <td class="text-[#0039A6] w-[30%] font-avenir-book text-left">Data Initiated</td>
                 <td class="text-[#0039A6] w-[20%] font-avenir-book text-left ">Status of Request</td>
@@ -56,13 +56,14 @@
        </th>
        <tbody class="w-full rounded-md ">
         <tr class="flex gap-2 items-center border-b" *ngFor="let  customer of customerDetails">
-            <td class="py-8 font-avenir-book  w-[10%]">{{customer.index}}</td>
+            <td class="py-8 font-avenir-book pl-2 w-[10%]">{{customer.index}}</td>
             <td class="w-[40%] font-avenir-book">{{customer.customerDetails}}</td>
             <td class="w-[30%] font-avenir-book">{{customer.date}}</td>
             <td class=" bg-[#CBFFAE] font-avenir-book text-[#067306] rounded-md text-center w-[10%]" [ngClass]="{'bg-[#FFE6B0] text-[#946300]' : customer.statusOfRequest=== 'Pending' , 'bg-[#FFABE8] text-[#9E0038]' : customer.statusOfRequest=== 'Rejected'}">{{customer.statusOfRequest}}</td>
         </tr>
        </tbody>
        </table>
-       <div class="text-[#6E7A91]">showing 10 of 60</div>
+       <mat-paginator [length]="200" [pageSizeOptions]="[10, 50, 100]" aria-label="Select page">
+        </mat-paginator>
     </div>
 </div>
