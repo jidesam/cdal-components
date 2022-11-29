@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-request-customer-data',
   templateUrl: './request-customer-data.component.html',
@@ -8,7 +8,9 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
 })
 export class RequestCustomerDataComponent implements OnInit {
   newRequestForm!: FormGroup;
-  constructor() { }
+  constructor(
+    private route: Router
+  ) { }
 
   ngOnInit(): void {
     this.initNewRequestForm()
@@ -28,5 +30,8 @@ export class RequestCustomerDataComponent implements OnInit {
     })
   }
   
+  customerTable(){
+    this.route.navigateByUrl(`main/existing-users`)
+  }
 
 }

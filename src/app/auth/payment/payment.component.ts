@@ -15,8 +15,7 @@ export class PaymentComponent implements OnInit {
   planAmount! : string 
   paymentBtnText! : string
   paymentForm! : FormGroup
-  errorMessage! : string
-
+  
   constructor(
     private location: LocationStrategy,
     private activatedRoute : ActivatedRoute,
@@ -57,6 +56,7 @@ export class PaymentComponent implements OnInit {
   bankTransfer(){
     this.notify.publishMessages("Payment has been sucessfully made. ", 0)
     this.router.navigateByUrl('/main')
+    console.log(this.paymentForm.value)
   }
 
   selectPayWithTransfer() {
@@ -67,24 +67,6 @@ export class PaymentComponent implements OnInit {
   selectPayWithCard() {
     this.payWithCard = true
     this.payWithTransfer = false
-  }
-
-  getInputValue(value : any){
-    let date = value.target.value
-    if (!(/^[0-9]+$/i.test(date))) {
-      // it looks okay now
-      console.log("not valid")
-      this.errorMessage = "Input a valid card details"
-  }else {
-    this.errorMessage=""
-  }
-  
-    if(value.inputType !== "deleteContentBackward") {
-      if(date.length == 2 ) {
-        value.target.value = date + '/'
-      }
-    }
-
   }
 
 }

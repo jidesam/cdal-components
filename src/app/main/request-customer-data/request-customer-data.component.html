@@ -79,25 +79,25 @@
             </div>
             <div class="md:mb-8">
               <label for="" class="block tracking-wide text-grey-icon lg:text-base text-sm mb-2">For how long customer data is required for?</label>
-              <app-application-input [class]="'lg:text-base text-sm placeholder:text-[#A0AABD] h-8 border border-grey-line outline-none rounded-lg bg-[#EFF2F6] w-full p-5 py-7 focus:outline-none'"
+              <!-- <app-application-input [class]="'lg:text-base text-sm placeholder:text-[#A0AABD] h-8 border border-grey-line outline-none rounded-lg bg-[#EFF2F6] w-full p-5 py-7 focus:outline-none'"
               [placeholder]="'Enter a valid Email address'" [type]="'date'"
               [control]="$any(newRequestForm.get('emailAddress'))" [errorMessage]="'This is Required'" [required]="true">
 
-              </app-application-input>
-              <!-- <mat-form-field appearance="fill">
-                <mat-label>Enter a date range</mat-label>
-                <mat-date-range-input [rangePicker]="picker">
-                  <input matStartDate placeholder="Start date">
-                  <input matEndDate placeholder="End date">
-                </mat-date-range-input>
-                <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
-                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-date-range-picker #picker></mat-date-range-picker>
-              </mat-form-field> -->
-              <!-- <mat-checkbox type="checkbox" class="custom-frame"></mat-checkbox> -->
+              </app-application-input> -->
+              <mat-form-field appearance="fill" class="w-full p-0 rounded-[10px]">
+                <mat-label> Enter a date range</mat-label>
+                <div class="flex flex-between items-center">
+                  <mat-date-range-input [rangePicker]="picker">
+                    <input matStartDate placeholder="MM/DD/YYYY ">
+                    <input matEndDate placeholder="MM/DD/YYYY">
+                  </mat-date-range-input>
+                  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-date-range-picker #picker></mat-date-range-picker>
+                </div>
+              </mat-form-field>
             </div>
             <div class="flex justify-end col-span-2">
-              <app-app-btn [overRideButtonClass]="true" [disabled]="newRequestForm.invalid"  [customClass]="'w-full text-base leading-6 font-[500] text-[#FCFCFC] bg-[#0039A6] rounded-[12px] text-center py-4 px-4'" [buttonText]="'Submit Request'"></app-app-btn>
+              <app-app-btn [overRideButtonClass]="true" [disabled]="newRequestForm.invalid"  [customClass]="'w-full text-base leading-6 font-[500] text-[#FCFCFC] bg-[#0039A6] rounded-[12px] text-center py-4 px-4'" [buttonText]="'Submit Request'" (buttonClick)="customerTable()"></app-app-btn>
             </div>
           </div>
         </form>
