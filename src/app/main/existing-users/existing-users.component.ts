@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExistingUsersComponent implements OnInit {
   btnImg ='assets/Images/my-request/plus.svg'
-  
+  totalLength: any;
+  page: number = 1;
 
   constructor() { }
 
@@ -48,6 +49,42 @@ export class ExistingUsersComponent implements OnInit {
     },
      {
       index: 6,
+      customerDetails : 'Adekunle Ibraheem',
+      date: 'April 28 2022',
+      statusOfRequest: 'Granted'
+    },
+     {
+      index: 7,
+      customerDetails : 'Adekunle Ibraheem',
+      date: 'April 28 2022',
+      statusOfRequest: 'Granted'
+    },
+     {
+      index: 8,
+      customerDetails : 'Adekunle Ibraheem',
+      date: 'April 28 2022',
+      statusOfRequest: 'Granted'
+    },
+     {
+      index: 6,
+      customerDetails : 'Adekunle Ibraheem',
+      date: 'April 28 2022',
+      statusOfRequest: 'Granted'
+    },
+     {
+      index: 9,
+      customerDetails : 'Adekunle Ibraheem',
+      date: 'April 28 2022',
+      statusOfRequest: 'Granted'
+    },
+     {
+      index: 10,
+      customerDetails : 'Adekunle Ibraheem',
+      date: 'April 28 2022',
+      statusOfRequest: 'Granted'
+    },
+     {
+      index: 11,
       customerDetails : 'Adekunle Ibraheem',
       date: 'April 28 2022',
       statusOfRequest: 'Granted'
