@@ -1,0 +1,40 @@
+<div class="formgroup relative">
+    <input
+      [type]="type"
+      [placeholder]="placeholder"
+      [class]="class"
+      [required]="required"
+      [readonly]="readonly"
+      [formControl]="control"
+      [ngClass]="{ 'is-invalid': invalid }"
+      [value]="value"
+      [minlength]="minlength"
+      [pattern]="pattern"
+      (input)="getInputValue($event)"
+      maxlength="5"
+    />
+  </div>
+  
+  <ng-container>
+    <small
+      class="text-red-500 mt-1 absolute"
+      [class.hidden]="control.valid || control.untouched"
+      *ngIf="control.errors?.['required']"
+    >
+      {{ errorMessage }}
+    </small>
+  
+    <small
+      class="text-red-500 absolute mt-1"
+      *ngIf="control.errors?.['minlength']"
+    >
+      This must be at least {{control.errors?.['minlength'].requiredLength}}
+    </small>
+    <small class="text-red-500 absolute" *ngIf="control.errors?.['pattern']">
+      It must be a number and must be up to 11 digit
+    </small>
+    <small class="text-red-500"> {{errorMessage}}</small>
+    <small class="text-red-500"> {{errorMessage2}}</small>
+    <small class="text-red-500"> {{errorMessage3}} </small>
+  </ng-container>
+  

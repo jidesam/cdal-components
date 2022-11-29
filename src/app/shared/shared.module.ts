@@ -14,6 +14,7 @@ import { AuthHeaderComponent } from './components/auth-header/auth-header.compon
 import { LoginInputComponent } from './login-input/login-input.component';
 import { UpgradePlanCardComponent } from './components/upgrade-plan-card/upgrade-plan-card.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { AppDateComponent } from './components/app-date/app-date.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { NotificationComponent } from './components/notification/notification.co
     AuthHeaderComponent,
     LoginInputComponent,
     UpgradePlanCardComponent,
-    NotificationComponent
+    NotificationComponent,
+    AppDateComponent
   ],
   imports: [
     CommonModule,
@@ -44,7 +46,8 @@ import { NotificationComponent } from './components/notification/notification.co
     ApplicationInputComponent,
     AuthHeaderComponent,
     LoginInputComponent,
-    UpgradePlanCardComponent
+    UpgradePlanCardComponent,
+    AppDateComponent
 
   ]
 })
