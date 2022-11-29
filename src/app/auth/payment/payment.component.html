@@ -28,10 +28,10 @@
                     <div class="grid grid-cols-2 mt-8 gap-4">
                         <div class="w-full">
                             <label for="" class="text-base leading-6 font-[400] text-[#6E7A91] block mb-2"> Valid Until </label>
-                            <input type="text" maxlength="5" (input)="getInputValue($event)" placeholder="MM / YY" formControlName="expireDate" class="bg-[#EFF2F6] px-4 py-3 rounded-[8px] placeholder:text-[#A0AABD] text-[#292B2F] text-base leading-6 font-[400] border outline-none w-full">
-                            <small *ngIf="paymentForm.get('expireDate')?.invalid && paymentForm.get('expireDate')?.touched"> date required! </small>
-                            <small> {{errorMessage}}</small>
-                            <small *ngIf="paymentForm.get('expireDate')?.touched && paymentForm.get('expireDate')?.errors?.['minlenght']"> invalid date </small>
+                           
+                            <app-app-date [control]="$any(paymentForm.get('expireDate'))" [placeholder]="'MM/YY'" [class]="'bg-[#EFF2F6] px-4 py-3 placeholder:text-[#A0AABD] text-[#292B2F] text-base leading-6 font-[400] rounded-[8px] border outline-none w-full'">
+
+                            </app-app-date>
                         </div>
                         <div class="w-full">
                             <label for="" class="text-base leading-6 font-[400]  text-[#6E7A91] block mb-2"> CVV </label>
