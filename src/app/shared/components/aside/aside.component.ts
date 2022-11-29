@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +10,8 @@ import { Router } from '@angular/router';
 export class AsideComponent implements OnInit {
 
   constructor(
-    private router : Router
+    private router : Router,
+    private matDialog : MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -18,5 +20,6 @@ export class AsideComponent implements OnInit {
   upgradePlan() {
     this.router.navigateByUrl("/main/upgrade-plan")
   }
+
 
 }
