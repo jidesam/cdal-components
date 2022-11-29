@@ -3,8 +3,8 @@
      <div class="w-[389px] ">
         <div class="mb-12 logoTransition"> <img src="assets/Images/CDAL Logo_2.svg" alt=""></div>
       <div class="formTransition">
-        <div class="mb-2.5 text-[#0039A6] text-2xl">Log in to your Dashboard</div>
-        <div class="mb-8 text-base text-[#4B5466]">Access verifiable customer financial data to make the best possible business decisions. </div>
+        <p class="mb-2.5 text-[#0039A6] text-2xl">Log in to your Dashboard</p>
+        <p class="mb-8 text-base text-[#4B5466]">Access verifiable customer financial data to make the best possible business decisions. </p>
         <!-- form -->
         <form [formGroup]="loginAuth" (ngSubmit)="submitLogin()" class="mb-8">
             <div class="form-group mb-4">
@@ -52,7 +52,7 @@
           <app-app-btn [overRideButtonClass]="true" [disabled]="loginAuth.invalid" (click)="subscriptionRoute()" [customClass]="'bg-[#0039A6] flex justify-center w-full py-[12px] rounded-[10px] px-[24px] text-center cursor-pointer md:text-base text-white'" [buttonText]="'Login'"></app-app-btn>
       </div>
         </form>
-      <div class="text-[#4B5466] text-base border-b border-[#4B5466] w-fit cursor-pointer" routerLink="/forgot-password">Forgot password?</div>
+      <p class="text-[#4B5466] text-base border-b border-[#4B5466] w-fit cursor-pointer" routerLink="/forgot-password">Forgot password?</p>
       </div>
     </div>
    </div>

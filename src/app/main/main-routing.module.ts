@@ -11,7 +11,7 @@ const routes: Routes = [
      { path: 'my-request', component: MyRequestComponent },
     { path: 'request-customer-data', component: RequestCustomerDataComponent},
     {path:'existing-users', component: ExistingUsersComponent},
-    {path: 'upgrade-plan', component: UpgradePlanComponent}
+    {path: 'upgrade-plan', component: UpgradePlanComponent},
   ]}
  
 ];
