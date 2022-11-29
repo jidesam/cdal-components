@@ -14,6 +14,7 @@ export class PaymentComponent implements OnInit {
   planAmount! : string 
   paymentBtnText! : string
   paymentForm! : FormGroup
+  errorMessage! : string
 
   constructor(
     private location: LocationStrategy,
@@ -37,7 +38,7 @@ export class PaymentComponent implements OnInit {
 
     this.paymentForm = new FormGroup ({
       cardNumber: new FormControl('', [Validators.required]),
-      expireDate : new FormControl('', [Validators.required]),
+      expireDate : new FormControl('', [Validators.required, Validators.minLength(5)]),
       cvv : new FormControl('', [Validators.required])
     })
 
@@ -59,6 +60,24 @@ export class PaymentComponent implements OnInit {
   selectPayWithCard() {
     this.payWithCard = true
     this.payWithTransfer = false
+  }
+
+  getInputValue(value : any){
+    let date = value.target.value
+    if (!(/^[0-9]+$/i.test(date))) {
+      // it looks okay now
+      console.log("not valid")
+      this.errorMessage = "Input a valid card details"
+  }else {
+    this.errorMessage=""
+  }
+  
+    if(value.inputType !== "deleteContentBackward") {
+      if(date.length == 2 ) {
+        value.target.value = date + '/'
+      }
+    }
+
   }
 
 }

@@ -25,7 +25,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatIconModule} from '@angular/material/icon';
 // import {MatInputModule} from '@angular/material/input';
 // import {MatListModule} from '@angular/material/list';
-// import {MatMenuModule} from '@angular/material/menu';
+import {MatMenuModule} from '@angular/material/menu';
 // import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 // import {MatSelectModule} from '@angular/material/select';
 // import {MatSidenavModule} from '@angular/material/sidenav';
@@ -76,7 +76,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatIconModule,
     // MatInputModule,
     // MatListModule,
-    // MatMenuModule,
+    MatMenuModule,
     // MatNativeDateModule,
     // MatRippleModule,
     // MatSelectModule,

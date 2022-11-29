@@ -8,11 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./subscription.component.scss']
 })
 export class SubscriptionComponent implements OnInit {
+  basicHover : boolean = false
+  standardHover : boolean = false
+  premiumHover : boolean = false
   benefits = [
     "10 Account Statement request ",
     "5 Balance Enquiry"
   ]
-
   standardBenefits = [
     "20 Account Statement request ",
     "10 Balance Enquiry"
@@ -30,9 +32,26 @@ export class SubscriptionComponent implements OnInit {
   }
 
  
-
+  mouseHoverEvent(data: string){
+    if(data === "basic"){
+      this.basicHover = true
+    }else if( data === "standard") {
+      this.standardHover = true
+    }else if(data === "premium") {
+      this.premiumHover = true
+    }
+  }
   buyBasic(plan:string) {
     this.router.navigateByUrl(`/payment/${plan}`)
   }
 
+  mouseLeave(data: string){
+    if(data === "basic"){
+      this.basicHover = false
+    }else if( data === "standard") {
+      this.standardHover = false
+    }else if(data === "premium") {
+      this.premiumHover = false
+    }
+  }
 }
