@@ -47,7 +47,8 @@ import { AppDateComponent } from './components/app-date/app-date.component';
     AuthHeaderComponent,
     LoginInputComponent,
     UpgradePlanCardComponent,
-    AppDateComponent
+    AppDateComponent,
+    NotificationsComponent
 
   ]
 })

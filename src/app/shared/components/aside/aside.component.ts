@@ -16,7 +16,7 @@ export class AsideComponent implements OnInit {
   }
 
   upgradePlan() {
-    this.router.navigateByUrl("/main/upgrade-plan")
+    this.router.navigateByUrl("/main/plans/upgrade-plan")
   }
 
 }
