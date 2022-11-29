@@ -25,7 +25,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatIconModule} from '@angular/material/icon';
 // import {MatInputModule} from '@angular/material/input';
 // import {MatListModule} from '@angular/material/list';
-// import {MatMenuModule} from '@angular/material/menu';
+import {MatMenuModule} from '@angular/material/menu';
 // import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 // import {MatSelectModule} from '@angular/material/select';
 // import {MatSidenavModule} from '@angular/material/sidenav';
@@ -74,7 +74,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatIconModule,
     // MatInputModule,
     // MatListModule,
-    // MatMenuModule,
+    MatMenuModule,
     // MatNativeDateModule,
     // MatRippleModule,
     // MatSelectModule,
@@ -97,6 +97,55 @@ import {MatDialogModule} from '@angular/material/dialog';
     // MatTableModule,
     // MatTabsModule,
     // MatIconModule
-  ]
+  ],
+  exports: [
+    CommonModule,
+    // A11yModule,
+    // CdkAccordionModule,
+    // ClipboardModule,
+    // CdkStepperModule,
+    // CdkTableModule,
+    // CdkTreeModule,
+    // DragDropModule,
+    // MatAutocompleteModule,
+    // MatBadgeModule,
+    // MatBottomSheetModule,
+    // MatButtonModule,
+    // MatButtonToggleModule,
+    // MatCardModule,
+    MatCheckboxModule,
+    // MatChipsModule,
+    // MatStepperModule,
+    MatDatepickerModule,
+    MatDividerModule,
+    // MatExpansionModule,
+    // MatGridListModule,
+    MatIconModule,
+    // MatInputModule,
+    // MatListModule,
+    MatMenuModule,
+    // MatNativeDateModule,
+    // MatRippleModule,
+    // MatSelectModule,
+    // MatSidenavModule,
+    // MatSliderModule,
+    // MatSlideToggleModule,
+    // MatSnackBarModule,
+    // MatSortModule,
+    // MatToolbarModule,
+    // MatTooltipModule,
+    // MatTreeModule,
+    // OverlayModule,
+    // PortalModule,
+    // ScrollingModule,
+    MatPaginatorModule,
+    // MatProgressBarModule,
+    MatProgressSpinnerModule,
+    // MatRadioModule,
+    MatDialogModule,
+    // MatTableModule,
+    // MatTabsModule,
+    // MatIconModule
+  ],
 })
 export class MaterialModule { }
