@@ -11,6 +11,7 @@ import { ExistingUsersComponent } from './existing-users/existing-users.componen
 import { UpgradePlanComponent } from './upgrade-plan/upgrade-plan.component';
 import { ManagePlanComponent } from './manage-plan/manage-plan.component';
 import { MaterialModule } from 'src/app/material.module';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MaterialModule } from 'src/app/material.module';
     ReactiveFormsModule,
     FormsModule,
     MaterialModule,
+    NgxPaginationModule
    
     
   ]
