@@ -2,6 +2,7 @@ import { LocationStrategy } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NotificationService } from 'src/app/services/notification.service';
 
 @Component({
   selector: 'app-payment',
@@ -19,7 +20,8 @@ export class PaymentComponent implements OnInit {
   constructor(
     private location: LocationStrategy,
     private activatedRoute : ActivatedRoute,
-    private router : Router
+    private router : Router,
+    private notify : NotificationService
 
   ) { }
 
@@ -48,7 +50,12 @@ export class PaymentComponent implements OnInit {
     this.location.back()
   }
 
-  paymentSuccess() {
+  cardPayment() {
+    this.notify.publishMessages("Payment has been sucessfully made. ", 0)
+    this.router.navigateByUrl('/main')
+  }
+  bankTransfer(){
+    this.notify.publishMessages("Payment has been sucessfully made. ", 0)
     this.router.navigateByUrl('/main')
   }
 

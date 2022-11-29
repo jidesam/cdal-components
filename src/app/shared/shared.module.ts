@@ -13,7 +13,7 @@ import { RouterModule } from '@angular/router';
 import { AuthHeaderComponent } from './components/auth-header/auth-header.component';
 import { LoginInputComponent } from './login-input/login-input.component';
 import { UpgradePlanCardComponent } from './components/upgrade-plan-card/upgrade-plan-card.component';
-import { NotificationComponent } from './components/notification/notification.component';
+import { NotificationsComponent } from './components/notification/notification.component';
 
 
 @NgModule({
@@ -26,7 +26,8 @@ import { NotificationComponent } from './components/notification/notification.co
     AuthHeaderComponent,
     LoginInputComponent,
     UpgradePlanCardComponent,
-    NotificationComponent
+    NotificationsComponent
+  
   ],
   imports: [
     CommonModule,
@@ -44,7 +45,8 @@ import { NotificationComponent } from './components/notification/notification.co
     ApplicationInputComponent,
     AuthHeaderComponent,
     LoginInputComponent,
-    UpgradePlanCardComponent
+    UpgradePlanCardComponent,
+    NotificationsComponent
 
   ]
 })

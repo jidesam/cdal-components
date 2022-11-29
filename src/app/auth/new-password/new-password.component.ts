@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PasswordValidator} from './validator'
+import { NotificationService } from 'src/app/services/notification.service';
 
 @Component({
   selector: 'app-new-password',
@@ -16,7 +17,10 @@ export class NewPasswordComponent implements OnInit {
   passwordImgUrl2 = 'assets/Images/eye.svg';
   passwordChange!: FormGroup
 
-  constructor(private route: Router) { }
+  constructor(
+    private route: Router,
+    private notify: NotificationService
+    ) { }
 
   ngOnInit(): void {
     this.initNNewPasswordForm()
@@ -33,6 +37,7 @@ export class NewPasswordComponent implements OnInit {
 
   newPasswordNavigate(){
     if (this.passwordChange.valid) {
+      this.notify.publishMessages("A new OTP has been sent to your email", 0)
       this.route.navigateByUrl('/login')
     }
   }
