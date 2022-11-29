@@ -30,8 +30,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
     FormsModule,
     MaterialModule,
     NgxPaginationModule
-   
-    
   ]
 })
 export class MainModule { }

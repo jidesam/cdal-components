@@ -13,12 +13,8 @@ import { RouterModule } from '@angular/router';
 import { AuthHeaderComponent } from './components/auth-header/auth-header.component';
 import { LoginInputComponent } from './login-input/login-input.component';
 import { UpgradePlanCardComponent } from './components/upgrade-plan-card/upgrade-plan-card.component';
-<<<<<<< HEAD
 import { NotificationsComponent } from './components/notification/notification.component';
-=======
-import { NotificationComponent } from './components/notification/notification.component';
 import { AppDateComponent } from './components/app-date/app-date.component';
->>>>>>> a2c705e59ced556d5fbb60c471afea369b4874a4
 
 
 @NgModule({
@@ -31,13 +27,8 @@ import { AppDateComponent } from './components/app-date/app-date.component';
     AuthHeaderComponent,
     LoginInputComponent,
     UpgradePlanCardComponent,
-<<<<<<< HEAD
-    NotificationsComponent
-  
-=======
-    NotificationComponent,
+    NotificationsComponent,
     AppDateComponent
->>>>>>> a2c705e59ced556d5fbb60c471afea369b4874a4
   ],
   imports: [
     CommonModule,
@@ -56,11 +47,7 @@ import { AppDateComponent } from './components/app-date/app-date.component';
     AuthHeaderComponent,
     LoginInputComponent,
     UpgradePlanCardComponent,
-<<<<<<< HEAD
-    NotificationsComponent
-=======
     AppDateComponent
->>>>>>> a2c705e59ced556d5fbb60c471afea369b4874a4
 
   ]
 })
