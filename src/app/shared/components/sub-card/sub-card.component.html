@@ -1,4 +1,4 @@
-<div class="w-full  rounded-[24px] p-8 shad card-shadow" [ngClass]="hasFeature? 'bg-[#0039A6]' : 'bg-[#FCFCFC]'">
+<div class="w-full  rounded-[24px] p-8 shad card-shadow cursor-pointer" (mouseout)="handleMouseOut()" (mouseover)=" overHandleClick()" [ngClass]="hasFeature? 'bg-[#0039A6]' : 'bg-[#FCFCFC]'">
     <div class="flex" *ngIf="hasFeature">
         <div class="mb-4 bg-[#EFF2F6] text-[#4B5466] font-[700] p-2 rounded-lg text-xs leading-[22px]">
             FEATURED
