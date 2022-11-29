@@ -42,6 +42,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 // import {MatRadioModule} from '@angular/material/radio';
 import {MatDialogModule} from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
 // import {MatTableModule} from '@angular/material/table';
 // import {MatTabsModule} from '@angular/material/tabs';
 
@@ -49,7 +51,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [],
-  imports: [
+  exports: [
     CommonModule,
     // A11yModule,
     // CdkAccordionModule,
@@ -96,7 +98,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatDialogModule,
     // MatTableModule,
     // MatTabsModule,
-    // MatIconModule
-  ]
+    // MatIconModule,
+    MatFormFieldModule,
+    MatNativeDateModule
+  ],
 })
 export class MaterialModule { }
