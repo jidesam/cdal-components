@@ -15,17 +15,17 @@ import { CommonModule } from '@angular/common';
 // import {MatButtonModule} from '@angular/material/button';
 // import {MatButtonToggleModule} from '@angular/material/button-toggle';
 // import {MatCardModule} from '@angular/material/card';
-// import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 // import {MatChipsModule} from '@angular/material/chips';
 // import {MatStepperModule} from '@angular/material/stepper';
-// import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatDividerModule} from '@angular/material/divider';
 // import {MatExpansionModule} from '@angular/material/expansion';
 // import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
 // import {MatInputModule} from '@angular/material/input';
 // import {MatListModule} from '@angular/material/list';
-// import {MatMenuModule} from '@angular/material/menu';
+import {MatMenuModule} from '@angular/material/menu';
 // import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 // import {MatSelectModule} from '@angular/material/select';
 // import {MatSidenavModule} from '@angular/material/sidenav';
@@ -64,17 +64,17 @@ import {MatDialogModule} from '@angular/material/dialog';
     // MatButtonModule,
     // MatButtonToggleModule,
     // MatCardModule,
-    // MatCheckboxModule,
+    MatCheckboxModule,
     // MatChipsModule,
     // MatStepperModule,
-    // MatDatepickerModule,
+    MatDatepickerModule,
     MatDividerModule,
     // MatExpansionModule,
     // MatGridListModule,
     MatIconModule,
     // MatInputModule,
     // MatListModule,
-    // MatMenuModule,
+    MatMenuModule,
     // MatNativeDateModule,
     // MatRippleModule,
     // MatSelectModule,
@@ -97,6 +97,55 @@ import {MatDialogModule} from '@angular/material/dialog';
     // MatTableModule,
     // MatTabsModule,
     // MatIconModule
-  ]
+  ],
+  exports: [
+    CommonModule,
+    // A11yModule,
+    // CdkAccordionModule,
+    // ClipboardModule,
+    // CdkStepperModule,
+    // CdkTableModule,
+    // CdkTreeModule,
+    // DragDropModule,
+    // MatAutocompleteModule,
+    // MatBadgeModule,
+    // MatBottomSheetModule,
+    // MatButtonModule,
+    // MatButtonToggleModule,
+    // MatCardModule,
+    MatCheckboxModule,
+    // MatChipsModule,
+    // MatStepperModule,
+    MatDatepickerModule,
+    MatDividerModule,
+    // MatExpansionModule,
+    // MatGridListModule,
+    MatIconModule,
+    // MatInputModule,
+    // MatListModule,
+    MatMenuModule,
+    // MatNativeDateModule,
+    // MatRippleModule,
+    // MatSelectModule,
+    // MatSidenavModule,
+    // MatSliderModule,
+    // MatSlideToggleModule,
+    // MatSnackBarModule,
+    // MatSortModule,
+    // MatToolbarModule,
+    // MatTooltipModule,
+    // MatTreeModule,
+    // OverlayModule,
+    // PortalModule,
+    // ScrollingModule,
+    MatPaginatorModule,
+    // MatProgressBarModule,
+    MatProgressSpinnerModule,
+    // MatRadioModule,
+    MatDialogModule,
+    // MatTableModule,
+    // MatTabsModule,
+    // MatIconModule
+  ],
 })
 export class MaterialModule { }

@@ -1,10 +1,10 @@
 <app-header></app-header>
-<div class="bg-[#F8F9FB] px-32 py-6">
+<div class="bg-[#F8F9FB] px-6  md:px-32 py-6 ">
     <div class=" flex items-center space-x-2 cursor-pointer" (click)="back()">
         <span> <img src="assets/Images/back-arrow.png" alt=""> </span>
         <span class="text-[#4B5466] text-[14px] font-[500] leading-[22px]"> Back </span>
     </div>
-    <div class="w-[55%] mx-auto bg-[#FFFFFF] rounded-[16px] p-12">
+    <div class=" w-full md:max-w-[640px] mx-auto bg-[#FFFFFF] rounded-[16px] p-4 md:p-12 border border-[#EFF2F6]">
         <div class="flex justify-center">
             <div>
                 <img src="assets/Images/CDAL Logo_2.svg" class="mx-auto" alt="">
@@ -28,7 +28,10 @@
                     <div class="grid grid-cols-2 mt-8 gap-4">
                         <div class="w-full">
                             <label for="" class="text-base leading-6 font-[400] text-[#6E7A91] block mb-2"> Valid Until </label>
-                            <app-application-input  [control]="$any(paymentForm.get('expireDate'))" [errorMessage]="'This field required!'" [placeholder]="'MM / YY'" [class]="'bg-[#EFF2F6] px-4 py-3 rounded-[8px] placeholder:text-[#A0AABD] text-[#292B2F] text-base leading-6 font-[400] border outline-none w-full'"> </app-application-input>
+                            <input type="text" maxlength="5" (input)="getInputValue($event)" placeholder="MM / YY" formControlName="expireDate" class="bg-[#EFF2F6] px-4 py-3 rounded-[8px] placeholder:text-[#A0AABD] text-[#292B2F] text-base leading-6 font-[400] border outline-none w-full">
+                            <small *ngIf="paymentForm.get('expireDate')?.invalid && paymentForm.get('expireDate')?.touched"> date required! </small>
+                            <small> {{errorMessage}}</small>
+                            <small *ngIf="paymentForm.get('expireDate')?.touched && paymentForm.get('expireDate')?.errors?.['minlenght']"> invalid date </small>
                         </div>
                         <div class="w-full">
                             <label for="" class="text-base leading-6 font-[400]  text-[#6E7A91] block mb-2"> CVV </label>
@@ -36,8 +39,9 @@
                         </div>
                     </div>
 
+
                     <div class="mt-8">
-                        <app-app-btn [overRideButtonClass]="true" [disabled]="paymentForm.invalid"  [customClass]="'w-full text-base leading-6 font-[500] text-[#FCFCFC] flex justify-center bg-[#0039A6] rounded-[12px] text-center py-4 px-4'" [buttonText]="paymentBtnText"></app-app-btn>
+                        <app-app-btn [overRideButtonClass]="true" (buttonClick)="paymentSuccess()" [disabled]="paymentForm.invalid"  [customClass]="'w-full text-base leading-6 font-[500] text-[#FCFCFC] flex justify-center bg-[#0039A6] rounded-[12px] text-center py-4 px-4'" [buttonText]="paymentBtnText"></app-app-btn>
                     </div>
                 </form>
             </div>

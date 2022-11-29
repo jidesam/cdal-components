@@ -4,7 +4,7 @@
             <p class="font-[500] text-[#0039A6] font-avenir-book">Most recent requests</p>
             <p class="text-[#4B5466] font-avenir-book">There is a two line supporting Text here, that gives </p>
         </div>
-        <div>
+        <div routerLink="/main/request-customer-data">
             <app-app-btn [overRideButtonClass]="true"
             [buttonImage]="btnImg"
             [buttonText]="'New request'"
@@ -20,25 +20,28 @@
         <input type="text" placeholder="Search" class="border-0 outline-none bg-[#EFF2F6]">
        </div>
        <div class="flex gap-4 items-center cursor-pointer">
-            <div class="flex gap-4 border px-2 py-2 rounded-md">
-                <p class="text-[#003CAB]">Sort</p>
+            <button mat-button [matMenuTriggerFor]="beforeMenu" class="flex items-center gap-4 border px-2 py-2 rounded-md">
+                <span class="text-[#003CAB]">Sort</span>
                 <img src="assets/Images/keyboard_arrow_down_24px.svg" alt="">
-
-                
-                    <ul>
-                        <li>Oldest to newest</li>
-                        <li>Newest to oldest</li>
-                        <li>Ascending Order (A-Z)</li>
-                        <li>Descending Order (Z-A)</li>
-                    </ul>
-                
-                
-            </div>
-             <div class="flex gap-4 border px-2 py-2 rounded-md cursor-pointer">
-                <p class="text-[#003CAB]">Filter</p>
+            </button>
+            <mat-menu #beforeMenu="matMenu" xPosition="before" class="pr-8 px-2">
+                <div class="font-[500]">Sort By</div>
+                <button class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Oldest to Newest</button>
+                <button  class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Newest to Oldest</button>
+                <button  class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Ascending Order (A-Z)</button>
+                <button  class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Decending Order (Z-A)</button>
+            </mat-menu>
+             <button mat-button [matMenuTriggerFor]="beforeMenu" class="flex items-center gap-4 border px-2 py-2 rounded-md">
+                <span class="text-[#003CAB]">Filter</span>
                 <img src="assets/Images/keyboard_arrow_down_24px.svg" alt="">
+            </button>
+            <mat-menu #beforeMenu="matMenu" xPosition="before" class="pr-8 px-2">
+                <div class="font-[500]">Filter by</div>
+                <button class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Granted Request </button>
+                <button  class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Pending Requests</button>
+                <button  class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Rejected Request</button>
                 
-            </div>
+            </mat-menu>
        </div>
        </div>
 
@@ -60,5 +63,6 @@
         </tr>
        </tbody>
        </table>
+       <div class="text-[#6E7A91]">showing 10 of 60</div>
     </div>
 </div>
