@@ -9,9 +9,9 @@
 
         <div class="mt-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div> <app-sub-card amount="10,000" (buttonClick)="buyBasic('basic')" plan="Basic Plan" [benefits]="benefits"></app-sub-card> </div>
-                <div> <app-sub-card amount="20,000" (buttonClick)="buyBasic('standard')" plan="Standard Plan" [hasFeature]="true" [benefits]="standardBenefits"></app-sub-card> </div>
-                <div> <app-sub-card amount="50,000" (buttonClick)="buyBasic('premium')"  plan="Premium Plan" [benefits]="premiumBenefits"></app-sub-card> </div>
+                <div> <app-sub-card amount="10,000" (mouseHoverOut)="mouseLeave('basic')" (mouseHover)="mouseHoverEvent('basic')" (buttonClick)="buyBasic('basic')" plan="Basic Plan" [hasFeature]="basicHover" [benefits]="benefits"></app-sub-card> </div>
+                <div> <app-sub-card amount="20,000" (mouseHoverOut)="mouseLeave('standard')" (mouseHover)="mouseHoverEvent('standard')" (buttonClick)="buyBasic('standard')" plan="Standard Plan" [hasFeature]="standardHover" [benefits]="standardBenefits"></app-sub-card> </div>
+                <div> <app-sub-card amount="50,000" (mouseHoverOut)="mouseLeave('premium')" (mouseHover)="mouseHoverEvent('premium')" (buttonClick)="buyBasic('premium')"  plan="Premium Plan" [hasFeature]="premiumHover" [benefits]="premiumBenefits"></app-sub-card> </div>
             </div>
         </div>
     </div>
