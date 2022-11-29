@@ -42,6 +42,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 // import {MatRadioModule} from '@angular/material/radio';
 import {MatDialogModule} from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
 // import {MatTableModule} from '@angular/material/table';
 // import {MatTabsModule} from '@angular/material/tabs';
 
@@ -49,55 +51,6 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    // A11yModule,
-    // CdkAccordionModule,
-    // ClipboardModule,
-    // CdkStepperModule,
-    // CdkTableModule,
-    // CdkTreeModule,
-    // DragDropModule,
-    // MatAutocompleteModule,
-    // MatBadgeModule,
-    // MatBottomSheetModule,
-    // MatButtonModule,
-    // MatButtonToggleModule,
-    // MatCardModule,
-    MatCheckboxModule,
-    // MatChipsModule,
-    // MatStepperModule,
-    MatDatepickerModule,
-    MatDividerModule,
-    // MatExpansionModule,
-    // MatGridListModule,
-    MatIconModule,
-    // MatInputModule,
-    // MatListModule,
-    MatMenuModule,
-    // MatNativeDateModule,
-    // MatRippleModule,
-    // MatSelectModule,
-    // MatSidenavModule,
-    // MatSliderModule,
-    // MatSlideToggleModule,
-    // MatSnackBarModule,
-    // MatSortModule,
-    // MatToolbarModule,
-    // MatTooltipModule,
-    // MatTreeModule,
-    // OverlayModule,
-    // PortalModule,
-    // ScrollingModule,
-    MatPaginatorModule,
-    // MatProgressBarModule,
-    MatProgressSpinnerModule,
-    // MatRadioModule,
-    MatDialogModule,
-    // MatTableModule,
-    // MatTabsModule,
-    // MatIconModule
-  ],
   exports: [
     CommonModule,
     // A11yModule,
@@ -145,7 +98,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatDialogModule,
     // MatTableModule,
     // MatTabsModule,
-    // MatIconModule
+    // MatIconModule,
+    MatFormFieldModule,
+    MatNativeDateModule
   ],
 })
 export class MaterialModule { }
