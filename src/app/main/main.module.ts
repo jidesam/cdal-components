@@ -20,7 +20,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     RequestCustomerDataComponent,
     ExistingUsersComponent,
     UpgradePlanComponent,
-    ManagePlanComponent
+    ManagePlanComponent,
   ],
   imports: [
     CommonModule,
@@ -30,8 +30,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
     FormsModule,
     MaterialModule,
     NgxPaginationModule
-   
-    
   ]
 })
 export class MainModule { }

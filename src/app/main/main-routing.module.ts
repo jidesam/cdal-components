@@ -9,12 +9,12 @@ import { UpgradePlanComponent } from './upgrade-plan/upgrade-plan.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent , children:[
-    { path: 'my-request', component: MyRequestComponent },
-    { path: 'request-customer-data', component: RequestCustomerDataComponent },
-    { path:'existing-users', component: ExistingUsersComponent },
+     { path: 'my-request', component: MyRequestComponent },
+    { path: 'request-customer-data', component: RequestCustomerDataComponent},
+    {path:'existing-users', component: ExistingUsersComponent},
+    {path: 'upgrade-plan', component: UpgradePlanComponent},
     { path: 'manage-plan', component: ManagePlanComponent },
 
-    {path: 'upgrade-plan', component: UpgradePlanComponent}
   ]}
  
 ];

@@ -13,7 +13,7 @@ import { RouterModule } from '@angular/router';
 import { AuthHeaderComponent } from './components/auth-header/auth-header.component';
 import { LoginInputComponent } from './login-input/login-input.component';
 import { UpgradePlanCardComponent } from './components/upgrade-plan-card/upgrade-plan-card.component';
-import { NotificationComponent } from './components/notification/notification.component';
+import { NotificationsComponent } from './components/notification/notification.component';
 import { AppDateComponent } from './components/app-date/app-date.component';
 
 
@@ -27,7 +27,7 @@ import { AppDateComponent } from './components/app-date/app-date.component';
     AuthHeaderComponent,
     LoginInputComponent,
     UpgradePlanCardComponent,
-    NotificationComponent,
+    NotificationsComponent,
     AppDateComponent
   ],
   imports: [
