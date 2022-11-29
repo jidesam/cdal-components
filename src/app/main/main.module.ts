@@ -10,6 +10,8 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { ExistingUsersComponent } from './existing-users/existing-users.component';
 import { UpgradePlanComponent } from './upgrade-plan/upgrade-plan.component';
 import { ManagePlanComponent } from './manage-plan/manage-plan.component';
+import { MaterialModule } from 'src/app/material.module';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,11 @@ import { ManagePlanComponent } from './manage-plan/manage-plan.component';
     MainRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MaterialModule,
+    NgxPaginationModule
+   
+    
   ]
 })
 export class MainModule { }

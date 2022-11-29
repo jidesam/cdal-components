@@ -20,45 +20,54 @@
         <input type="text" placeholder="Search" class="border-0 outline-none bg-[#EFF2F6]">
        </div>
        <div class="flex gap-4 items-center cursor-pointer">
-            <div class="flex gap-4 border px-2 py-2 rounded-md">
-                <p class="text-[#003CAB]">Sort</p>
+            <button mat-button [matMenuTriggerFor]="beforeMenu" class="flex items-center gap-4 border px-2 py-2 rounded-md">
+                <span class="text-[#003CAB]">Sort</span>
                 <img src="assets/Images/keyboard_arrow_down_24px.svg" alt="">
-
-                
-                    <!-- <ul>
-                        <li>Oldest to newest</li>
-                        <li>Newest to oldest</li>
-                        <li>Ascending Order (A-Z)</li>
-                        <li>Descending Order (Z-A)</li>
-                    </ul> -->
-                
-                
-            </div>
-             <div class="flex gap-4 border px-2 py-2 rounded-md cursor-pointer">
-                <p class="text-[#003CAB]">Filter</p>
+            </button>
+            <mat-menu #beforeMenu="matMenu" xPosition="before" class="pr-8 px-2">
+                <div class="font-[500]">Sort By</div>
+                <button class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Oldest to Newest</button>
+                <button  class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Newest to Oldest</button>
+                <button  class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Ascending Order (A-Z)</button>
+                <button  class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Decending Order (Z-A)</button>
+            </mat-menu>
+             <button mat-button [matMenuTriggerFor]="beforeMenu" class="flex items-center gap-4 border px-2 py-2 rounded-md">
+                <span class="text-[#003CAB]">Filter</span>
                 <img src="assets/Images/keyboard_arrow_down_24px.svg" alt="">
+            </button>
+            <mat-menu #beforeMenu="matMenu" xPosition="before" class="pr-8 px-2">
+                <div class="font-[500]">Filter by</div>
+                <button class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Granted Request </button>
+                <button  class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Pending Requests</button>
+                <button  class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Rejected Request</button>
                 
-            </div>
+            </mat-menu>
        </div>
        </div>
 
        <table  class="w-full">
         <th class="w-full bg-[#f8f9fb] py-4 rounded-md ">
                 <tr class="flex gap-2 items-center">
-                <td class="text-[#0039A6] w-[10%] font-avenir-book text-left">S/N</td>
+                <td class="text-[#0039A6] w-[10%] font-avenir-book text-left pl-2">S/N</td>
                 <td class="text-[#0039A6] w-[40%] font-avenir-book text-left">Customer Details</td>
                 <td class="text-[#0039A6] w-[30%] font-avenir-book text-left">Data Initiated</td>
                 <td class="text-[#0039A6] w-[20%] font-avenir-book text-left ">Status of Request</td>
                 </tr>
        </th>
        <tbody class="w-full rounded-md ">
-        <tr class="flex gap-2 items-center border-b" *ngFor="let  customer of customerDetails">
-            <td class="py-8 font-avenir-book  w-[10%]">{{customer.index}}</td>
+        <tr class="flex gap-2 items-center border-b" *ngFor="let  customer of customerDetails; let i = index">
+            <td class="py-8 font-avenir-book pl-2 w-[10%]">{{customer.index}}</td>
             <td class="w-[40%] font-avenir-book">{{customer.customerDetails}}</td>
             <td class="w-[30%] font-avenir-book">{{customer.date}}</td>
             <td class=" bg-[#CBFFAE] font-avenir-book text-[#067306] rounded-md text-center w-[10%]" [ngClass]="{'bg-[#FFE6B0] text-[#946300]' : customer.statusOfRequest=== 'Pending' , 'bg-[#FFABE8] text-[#9E0038]' : customer.statusOfRequest=== 'Rejected'}">{{customer.statusOfRequest}}</td>
         </tr>
        </tbody>
        </table>
+        
+        <div class="flex  py-4 px-6 mt-3 items-center">
+        <mat-paginator  [length]="customerDetails.length" [pageSizeOptions]="[10, 60, 40, 20, 10]">
+        </mat-paginator>  
+        </div>
+            
     </div>
 </div>
