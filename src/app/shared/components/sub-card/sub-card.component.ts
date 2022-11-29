@@ -12,6 +12,8 @@ export class SubCardComponent implements OnInit {
   @Input() benefits! : any
   @Input() hasFeature : boolean = false 
   @Output() buttonClick = new EventEmitter<boolean>();
+  @Output() mouseHover = new EventEmitter<boolean>()
+  @Output() mouseHoverOut = new EventEmitter<boolean>()
 
   constructor() { }
 
@@ -21,4 +23,13 @@ export class SubCardComponent implements OnInit {
   handleClick(){
     this.buttonClick.emit(true)
   }
+
+  overHandleClick() {
+    this.mouseHover.emit(true)
+  }
+
+  handleMouseOut() {
+    this.mouseHoverOut.emit(true)
+  }
+
 }
