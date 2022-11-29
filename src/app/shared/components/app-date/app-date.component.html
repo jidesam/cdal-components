@@ -17,7 +17,7 @@
   
   <ng-container>
     <small
-      class="text-red-500 mt-1 absolute"
+      class="text-red-500 "
       [class.hidden]="control.valid || control.untouched"
       *ngIf="control.errors?.['required']"
     >
@@ -25,12 +25,12 @@
     </small>
   
     <small
-      class="text-red-500 absolute mt-1"
+      class="text-red-500"
       *ngIf="control.errors?.['minlength']"
     >
       This must be at least {{control.errors?.['minlength'].requiredLength}}
     </small>
-    <small class="text-red-500 absolute" *ngIf="control.errors?.['pattern']">
+    <small class="text-red-500" *ngIf="control.errors?.['pattern']">
       It must be a number and must be up to 11 digit
     </small>
     <small class="text-red-500"> {{errorMessage}}</small>

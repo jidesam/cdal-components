@@ -39,7 +39,7 @@ export class AppDateComponent implements OnInit {
       this.errorMessage3 = ""
     }
     if(Number(month) > 12 ) {
-      this.errorMessage2 ="Please input a valid month"
+      this.errorMessage2 ="Please input a valid"
     }else {
       this.errorMessage2 =""
     } 
