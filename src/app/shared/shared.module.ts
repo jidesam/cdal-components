@@ -16,6 +16,7 @@ import { UpgradePlanCardComponent } from './components/upgrade-plan-card/upgrade
 import { NotificationsComponent } from './components/notification/notification.component';
 import { AppDateComponent } from './components/app-date/app-date.component';
 import { LogoutComponent } from './modals/logout/logout.component';
+import { SuccessComponent } from './modals/success/success.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { LogoutComponent } from './modals/logout/logout.component';
     AppDateComponent,
     LogoutComponent,
     NotificationsComponent,
-    AppDateComponent
+    AppDateComponent,
+    SuccessComponent
   ],
   imports: [
     CommonModule,

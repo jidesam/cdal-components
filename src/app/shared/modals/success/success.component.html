@@ -1,0 +1,13 @@
+<div class="w-[450px]">
+    <img src="assets/Images/Icon success.svg" alt="" class="flex mx-[auto] py-4">
+
+    <p class="text-[#0039A6]   text-center font-avenir-book font-semibold pb-4">Success</p>
+    <p class="text-center font-avenir-book pb-4 px-2 text-lg text-[#4B5466]">You have successfully submitted a request for customer financial data. We will notify the customer in order to grant consent. </p>
+    
+    <app-app-btn [overRideButtonClass]="true"
+                    [customClass]="'text-white bg-[#0039A6] rounded-xl px-2 py-2 block mx-auto'"
+                    [buttonText]="'Okay'"
+                    (buttonClick)="showAllRequest()">
+
+    </app-app-btn>
+</div>
