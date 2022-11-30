@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
+import { AsideComponent } from '../../components/aside/aside.component';
 
 @Component({
   selector: 'app-logout',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private matDialogRef : MatDialogRef<LogoutComponent>) { }
 
   ngOnInit(): void {
+  }
+  close(){
+    this.matDialogRef.close()
   }
 
 }
