@@ -15,6 +15,7 @@ import { LoginInputComponent } from './login-input/login-input.component';
 import { UpgradePlanCardComponent } from './components/upgrade-plan-card/upgrade-plan-card.component';
 import { NotificationsComponent } from './components/notification/notification.component';
 import { AppDateComponent } from './components/app-date/app-date.component';
+import { LogoutComponent } from './modals/logout/logout.component';
 
 
 @NgModule({
@@ -27,6 +28,8 @@ import { AppDateComponent } from './components/app-date/app-date.component';
     AuthHeaderComponent,
     LoginInputComponent,
     UpgradePlanCardComponent,
+    AppDateComponent,
+    LogoutComponent,
     NotificationsComponent,
     AppDateComponent
   ],
