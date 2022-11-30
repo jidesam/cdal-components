@@ -1,10 +1,10 @@
 <div class="grid grid-cols-2 ">
    <div class="flex justify-center  items-center">
-     <div class="md:w-[389px] ">
+     <div class="w-[389px] ">
         <div class="mb-12 logoTransition"> <img src="assets/Images/CDAL Logo_2.svg" alt=""></div>
       <div class="formTransition">
-        <div class="mb-2.5 text-[#0039A6] text-2xl">Log in to your Dashboard</div>
-        <div class="mb-8 text-base text-[#4B5466]">Access verifiable customer financial data to make the best possible business decisions. </div>
+        <p class="mb-2.5 text-[#0039A6] text-2xl">Log in to your Dashboard</p>
+        <p class="mb-8 text-base text-[#4B5466]">Access verifiable customer financial data to make the best possible business decisions. </p>
         <!-- form -->
         <form [formGroup]="loginAuth" (ngSubmit)="submitLogin()" class="mb-8">
             <div class="form-group mb-4">
@@ -19,7 +19,7 @@
 
                       
                             <img class="w-6 h-6 absolute left-5 top-1/2 translate-y-[-50%] " src="assets/Images/email.svg" alt="">
-                            <img *ngIf="loginAuth.value.email?.length" class="w-4  h-4 cursor-pointer absolute right-5 top-1/2 translate-y-[-50%]" src="assets/Images/minus.svg" alt=""
+                            <img *ngIf="loginAuth.value.email?.length" class="w-4  h-4 cursor-pointer absolute right-5 top-1/2 translate-y-[-50%]" src="assets/Images/cancel.svg" alt=""
                                 (click)="clearInput('email')"
                             >
                        
@@ -44,7 +44,7 @@
                 <img class="w-6 h-6 cursor-pointer absolute right-5 top-1/2 translate-y-[-50%]" src='assets/Images/eye.svg' alt="" (click)="toggleEye()">
             
             </div>
-            <small class="text-red-500 block text-ex-sm-regular mt-2 block" *ngIf="loginAuth.get('password')?.errors?.['required'] && loginAuth.get('password')?.touched">New password is required!</small>
+            <small class="text-red-500 block text-ex-sm-regular mt-2 block" *ngIf="loginAuth.get('password')?.errors?.['required'] && loginAuth.get('password')?.touched">Password is required!</small>
             <!-- <small class="text-red-500 block text-ex-sm-regular mt-2 block" *ngIf="loginAuth.get('password')?.errors?.['minlength']">New password must not be more than 4 numbers</small> -->
           </div>
       </div>
@@ -52,7 +52,7 @@
           <app-app-btn [overRideButtonClass]="true" [disabled]="loginAuth.invalid" (click)="subscriptionRoute()" [customClass]="'bg-[#0039A6] flex justify-center w-full py-[12px] rounded-[10px] px-[24px] text-center cursor-pointer md:text-base text-white'" [buttonText]="'Login'"></app-app-btn>
       </div>
         </form>
-      <div class="text-[#4B5466] text-base border-b border-[#4B5466] w-fit cursor-pointer" routerLink="/forgot-password">Forgot password?</div>
+      <p class="text-[#4B5466] text-base border-b border-[#4B5466] w-fit cursor-pointer" routerLink="/forgot-password">Forgot password?</p>
       </div>
     </div>
    </div>

@@ -7,10 +7,11 @@ import { EmailSentComponent } from './email-sent/email-sent.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { LoginComponent } from './login/login.component';
 import { NewPasswordComponent } from './new-password/new-password.component';
+import { AuthGuard } from '../guard/auth.guard';
 
   
   const routes: Routes = [
-    {path: '', component: AuthComponent, children:[
+    {path: '', component: AuthComponent, canActivate: [AuthGuard], children:[
       { path: '', component: LoginComponent},
       {path: 'login', component: LoginComponent},
       { path: 'forgot-password', component: ForgotPasswordComponent},

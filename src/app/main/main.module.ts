@@ -4,12 +4,12 @@ import { CommonModule } from '@angular/common';
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
 import { SharedModule } from '../shared/shared.module';
-import { MyRequestComponent } from './my-request/my-request.component';
-import { RequestCustomerDataComponent } from './request-customer-data/request-customer-data.component';
+import { MyRequestComponent } from './request/my-request/my-request.component';
+import { RequestCustomerDataComponent } from './request/request-customer-data/request-customer-data.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms'
-import { ExistingUsersComponent } from './existing-users/existing-users.component';
-import { UpgradePlanComponent } from './upgrade-plan/upgrade-plan.component';
-import { ManagePlanComponent } from './manage-plan/manage-plan.component';
+import { ExistingUsersComponent } from './request/existing-users/existing-users.component';
+import { UpgradePlanComponent } from './plans/upgrade-plan/upgrade-plan.component';
+import { ManagePlanComponent } from './plans/manage-plan/manage-plan.component';
 import { MaterialModule } from 'src/app/material.module';
 import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -20,7 +20,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     RequestCustomerDataComponent,
     ExistingUsersComponent,
     UpgradePlanComponent,
-    ManagePlanComponent
+    ManagePlanComponent,
   ],
   imports: [
     CommonModule,
@@ -30,8 +30,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
     FormsModule,
     MaterialModule,
     NgxPaginationModule
-   
-    
   ]
 })
 export class MainModule { }

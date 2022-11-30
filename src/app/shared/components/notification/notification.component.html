@@ -1,1 +1,10 @@
-<p>notification works!</p>
+<div *ngIf="notification.show" 
+class="absolute top-0 right-0 flex items-center z-[9999999999999] bg-[#EAF9DE] rounded-[12px]  p-6  space-x-8"
+>
+<div class="text-[#067306] font-[500] text-[18px] leading-6">
+    {{notification?.content}}
+</div>
+<div>
+    <img (click)="cancelNotification()" class="w-4  h-4 cursor-pointer" src="assets/Images/markCancel.png" alt="">
+</div>
+</div>
