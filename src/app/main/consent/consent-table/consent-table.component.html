@@ -60,7 +60,7 @@
             <td class="w-[20%] font-avenir-book text-[#4B5466]">{{data.typeOfData}}</td>
             <td class="w-[20%] font-avenir-book text-[#4B5466] " >{{data.validityPeriod}}</td>
             <td class=" w-[20%] font-avenir-book text-[#4B5466]">{{data.consentDate}}</td>
-            <td class=" w-[15%] bg-[#CBFFAE] font-avenir-book text-[#067306] rounded-md text-center" [ngClass]="{'bg-[#FFE6B0] text-[#946300] ': data.consentStatus === 'pending'}">{{data.consentStatus}}</td>
+            <td class=" px-2 py-1 w-fit bg-[#CBFFAE] font-avenir-book text-[#067306] rounded-md text-center" [ngClass]="{'bg-[#FFE6B0] text-[#946300] ': data.consentStatus === 'pending'}">{{data.consentStatus}}</td>
         </tr>
        </tbody>
        </table>
