@@ -7,9 +7,15 @@
        </div>
     </div>
      <div class=""[ngClass]="managePlanLink.isActive? 'border-l-4 border-[#0039A6]' :''"  routerLinkActive #managePlanLink="routerLinkActive" routerLink="/main/plans">
-        <div class="flex gap-4 mt-8 lg:ml-10 cursor-pointer px-4 py-2 mr-4" [ngClass]="managePlanLink.isActive? 'bg-[#F8F9FB]  rounded-md ':''" >
+        <div class="flex gap-4 mt-4 lg:ml-10 cursor-pointer px-4 py-2 mr-4" [ngClass]="managePlanLink.isActive? 'bg-[#F8F9FB]  rounded-md ':''" >
          <img [src]= " managePlanLink.isActive? 'assets/Images/bullet active.svg':'assets/Images/bullect inactive.svg' "   alt="">
            <div [ngClass]="managePlanLink.isActive? 'text-[#0039A6] font-avenir-book ':''">Manage plan</div>
+        </div>
+        </div>
+         <div class=""[ngClass]="consentLink.isActive? 'border-l-4 border-[#0039A6]' :''"  routerLinkActive #consentLink="routerLinkActive" routerLink="/main/consent">
+        <div class="flex gap-4 mt-4 lg:ml-10 cursor-pointer px-4 py-2 mr-4" [ngClass]="consentLink.isActive? 'bg-[#F8F9FB]  rounded-md ':''" >
+         <img [src]= " consentLink?.isActive? 'assets/Images/bullet active.svg':'assets/Images/bullect inactive.svg' "   alt="">
+           <div [ngClass]="consentLink.isActive? 'text-[#0039A6] font-avenir-book ':''">Consent</div>
         </div>
         </div>
     </div>

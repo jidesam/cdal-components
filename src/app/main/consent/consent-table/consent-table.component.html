@@ -1,0 +1,76 @@
+<div class="bg-[#F8F9FB] px-12 pt-8">
+     <div class="flex justify-between ">
+        <div>
+            <p class="font-[600] text-[#0039A6] font-avenir-book">Customer Consents</p>
+            <p class="text-[#4B5466] font-avenir-book w-[70%]">Below are customer consents to share their Financial Data. Access customer data by Unique decryption keys to make business decisions.</p>
+        </div>
+    </div>
+
+    <div class="w-[95%] bg-white rounded-lg border border-solid mt-12 px-8 ">
+       <div class="flex justify-between items-center py-8 ">
+        <div class="  flex gap-4 w-[40%] px-4 py-2 bg-[#EFF2F6] rounded-xl">
+        <img src="/assets/Images/search.svg" alt="">
+        <input type="text" placeholder="Search" class="border-0 outline-none bg-[#EFF2F6]">
+       </div>
+       <div class="flex gap-4 items-center cursor-pointer">
+            <button mat-button [matMenuTriggerFor]="beforeMenu" class="flex items-center gap-4 border px-2 py-2 rounded-md">
+                <span class="text-[#003CAB]">Sort</span>
+                <img src="assets/Images/keyboard_arrow_down_24px.svg" alt="">
+            </button>
+            <mat-menu #beforeMenu="matMenu" xPosition="before" class="pr-8 px-2">
+                <div class="font-[500]">Sort By</div>
+                <button class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Oldest to Newest</button>
+                <button  class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Newest to Oldest</button>
+                <button  class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Ascending Order (A-Z)</button>
+                <button  class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Decending Order (Z-A)</button>
+            </mat-menu>
+             <button mat-button [matMenuTriggerFor]="beforeMenu" class="flex items-center gap-4 border px-2 py-2 rounded-md">
+                <span class="text-[#003CAB]">Filter</span>
+                <img src="assets/Images/keyboard_arrow_down_24px.svg" alt="">
+            </button>
+            <mat-menu #beforeMenu="matMenu" xPosition="before" class="pr-8 px-2">
+                <div class="font-[500]">Filter by</div>
+                <button class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Granted Request </button>
+                <button  class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Pending Requests</button>
+                <button  class="text-[#6E7A91] py-2 px-2 hover:rounded-md hover:bg-[#F8F9FB] hover:w-full hover:text-left hover:items-center">Rejected Request</button>
+                
+            </mat-menu>
+       </div>
+       </div>
+
+       <table  class="w-full">
+        <th class="w-full bg-[#f8f9fb] py-4 rounded-md ">
+                <tr class="flex gap-2 items-center">
+                <td class="text-[#0039A6] w-[5%] font-avenir-book text-left pl-2">S/N</td>
+                <td class="text-[#0039A6] w-[20%] font-avenir-book text-left">Customer Details</td>
+                <td class="text-[#0039A6] w-[20%] font-avenir-book text-left">Type of Data</td>
+                <td class="text-[#0039A6] w-[20%] font-avenir-book text-left ">Data Validity Period</td>
+                <td class="text-[#0039A6] w-[20%] font-avenir-book text-left ">Consent Date</td>
+                <td class="text-[#0039A6] w-[15%] font-avenir-book text-left ">Consent Status</td>
+
+                </tr>
+       </th>
+       <tbody class="w-full rounded-md ">
+        <tr class="flex gap-2 items-center border-b" *ngFor="let data of customerData; let number = index ">
+            <td class="py-8 font-avenir-book text-[#4B5466] pl-2 w-[5%]">{{number+1}}</td>
+            <td class="w-[20%] font-avenir-book text-[#4B5466]">
+                <p>{{data.customerName}}</p>
+                <p>{{data.customerAccountNo}}</p>
+            </td>
+            <td class="w-[20%] font-avenir-book text-[#4B5466]">{{data.typeOfData}}</td>
+            <td class="w-[20%] font-avenir-book text-[#4B5466] " >{{data.validityPeriod}}</td>
+            <td class=" w-[20%] font-avenir-book text-[#4B5466]">{{data.consentDate}}</td>
+            <td class=" w-[15%] bg-[#CBFFAE] font-avenir-book text-[#067306] rounded-md text-center" [ngClass]="{'bg-[#FFE6B0] text-[#946300] ': data.consentStatus === 'pending'}">{{data.consentStatus}}</td>
+        </tr>
+       </tbody>
+       </table>
+        
+        <div class="flex  py-4 px-6 mt-3 items-center">
+            
+        <mat-paginator  [length]="customerData.length" [pageSizeOptions]="[10, 60, 40, 20, 10]">
+        </mat-paginator>  
+        
+        </div>
+            
+    </div>
+</div>
