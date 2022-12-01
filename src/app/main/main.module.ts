@@ -13,6 +13,7 @@ import { ManagePlanComponent } from './plans/manage-plan/manage-plan.component';
 import { MaterialModule } from 'src/app/material.module';
 import { NgxPaginationModule } from 'ngx-pagination';
 
+
 @NgModule({
   declarations: [
     MainComponent,
