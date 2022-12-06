@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavLinks } from '../shared/components/nav-links';
+import { LogoutComponent } from '../shared/modals/logout/logout.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-main',
@@ -27,11 +29,16 @@ export class MainComponent implements OnInit {
       icon: ''
     }
   ]
+   
 
   
-constructor() { }
+constructor( private matDialog : MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  logOutModal(){
+    this.matDialog.open(LogoutComponent)
   }
 
 }

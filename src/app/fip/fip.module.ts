@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { FipRoutingModule } from './fip-routing.module';
 import { FipComponent } from './fip.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { FipComponent } from './fip.component';
   ],
   imports: [
     CommonModule,
-    FipRoutingModule
+    FipRoutingModule,
+    SharedModule
   ]
 })
 export class FipModule { }

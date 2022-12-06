@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { LogoutComponent } from '../../modals/logout/logout.component';
@@ -12,7 +13,9 @@ import { NavLinks } from '../nav-links';
 export class AsideComponent implements OnInit {
 
   @Input() navLink! : NavLinks[] 
-  
+
+  @Output() logOutFunction = new EventEmitter
+
   constructor(
     private router : Router,
     private matDialog : MatDialog
@@ -25,8 +28,14 @@ export class AsideComponent implements OnInit {
     this.router.navigateByUrl("/main/plans/upgrade-plan")
   }
 
-  openLogoutModal(){
-    this.matDialog.open(LogoutComponent)
+  onclickLogOut(){
+
+    this.logOutFunction.emit()
+    // this.matDialog.open(LogoutComponent)
   }
   
 }
+function output() {
+  throw new Error('Function not implemented.');
+}
+

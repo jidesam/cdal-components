@@ -1,7 +1,8 @@
 <app-header></app-header>
 <div>
     <div class="fixed w-[18%] h-[90vh] z-[30]">
-        <app-aside [navLink]="navlink"></app-aside>
+        <app-aside [navLink]="navlink"
+                    (logOutFunction)="logOutModal()"></app-aside>
     </div>
    
         <div class="ml-[18%] w-[82%] z-[4]">

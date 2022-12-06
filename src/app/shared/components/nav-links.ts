@@ -4,3 +4,4 @@ export interface NavLinks {
     icon : string,
     activeIcon : string
 }
+
