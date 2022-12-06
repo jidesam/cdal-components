@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { FiuRoutingModule } from './fiu-routing.module';
-import { FiuComponent } from './fiu.component';
+import { FipRoutingModule } from './fip-routing.module';
+import { FipComponent } from './fip.component';
 import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
   declarations: [
-    FiuComponent
+    FipComponent
   ],
   imports: [
     CommonModule,
-    FiuRoutingModule,
+    FipRoutingModule,
     SharedModule
   ]
 })
-export class FiuModule { }
+export class FipModule { }
