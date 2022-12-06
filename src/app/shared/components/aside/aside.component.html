@@ -1,9 +1,9 @@
 <div class="w-full flex flex-col  pt-12  border border-solid border-l-0 border-b-0 border-t-0 justify-between h-[85vh]">
-    <div>
-        <div class="" [ngClass]="requestLink.isActive? 'border-l-4 border-[#0039A6] ' :''  "  routerLinkActive #requestLink="routerLinkActive" routerLink="/main/request">
+    <div *ngFor="let nav of navLink">
+        <div class="" [ngClass]="requestLink.isActive? 'border-l-4 border-[#0039A6] ' :''  "  routerLinkActive #requestLink="routerLinkActive" [routerLink]="nav?.routes">
        <div class="flex gap-4 lg:ml-10 cursor-pointer px-4 py-2 mr-4" [ngClass]="requestLink.isActive? 'bg-[#F8F9FB]  rounded-md  ':''">
          <img [src]= " requestLink.isActive? 'assets/Images/bullet active.svg':'assets/Images/bullect inactive.svg' "   alt="">
-        <div [ngClass]="requestLink.isActive? 'text-[#0039A6] font-avenir-book' : ''" class="">My request</div>
+        <div [ngClass]="requestLink.isActive? 'text-[#0039A6] font-avenir-book' : ''" class="">{{nav?.link}}</div>
        </div>
     </div>
      <div class=""[ngClass]="managePlanLink.isActive? 'border-l-4 border-[#0039A6]' :''"  routerLinkActive #managePlanLink="routerLinkActive" routerLink="/main/plans">

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FiuComponent } from './fiu.component';
+import { FipComponent } from './fip.component';
 
-const routes: Routes = [{ path: '', component: FiuComponent }];
+const routes: Routes = [{ path: '', component: FipComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class FiuRoutingModule { }
+export class FipRoutingModule { }

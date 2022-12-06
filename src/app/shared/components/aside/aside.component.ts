@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { LogoutComponent } from '../../modals/logout/logout.component';
+import { NavLinks } from '../nav-links';
 
 @Component({
   selector: 'app-aside',
@@ -10,6 +11,8 @@ import { LogoutComponent } from '../../modals/logout/logout.component';
 })
 export class AsideComponent implements OnInit {
 
+  @Input() navLink! : NavLinks[] 
+  
   constructor(
     private router : Router,
     private matDialog : MatDialog
