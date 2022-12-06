@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { SuccessComponent } from 'src/app/shared/modals/success/success.component';
 @Component({
   selector: 'app-request-customer-data',
   templateUrl: './request-customer-data.component.html',
@@ -9,8 +11,10 @@ import { Router } from '@angular/router';
 export class RequestCustomerDataComponent implements OnInit {
   newRequestForm!: FormGroup;
   constructor(
-    private route: Router
-  ) { }
+    private route: Router,
+    private matDialog : MatDialog
+   
+  ) { } 
 
   ngOnInit(): void {
     this.initNewRequestForm()
@@ -31,7 +35,8 @@ export class RequestCustomerDataComponent implements OnInit {
   }
   
   customerTable(){
-    this.route.navigateByUrl(`main/existing-users`)
+    this.matDialog.open(SuccessComponent)
+    
   }
 
 }

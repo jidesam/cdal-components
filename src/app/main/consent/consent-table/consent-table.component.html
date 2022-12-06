@@ -1,15 +1,8 @@
 <div class="bg-[#F8F9FB] px-12 pt-8">
-    <div class="flex justify-between ">
+     <div class="flex justify-between ">
         <div>
-            <p class="font-[500] text-[#0039A6] font-avenir-book">Most recent requests</p>
-            <p class="text-[#4B5466] font-avenir-book">There is a two line supporting Text here, that gives </p>
-        </div>
-        <div routerLink="/main/request/request-customer-data">
-            <app-app-btn [overRideButtonClass]="true"
-            [buttonImage]="btnImg"
-            [buttonText]="'New request'"
-            [customClass]="'bg-[#0039A6] px-4 py-2 text-white rounded-md'"></app-app-btn>
-            
+            <p class="font-[600] text-[#0039A6] font-avenir-book">Customer Consents</p>
+            <p class="text-[#4B5466] font-avenir-book w-[70%]">Below are customer consents to share their Financial Data. Access customer data by Unique decryption keys to make business decisions.</p>
         </div>
     </div>
 
@@ -48,25 +41,35 @@
        <table  class="w-full">
         <th class="w-full bg-[#f8f9fb] py-4 rounded-md ">
                 <tr class="flex gap-2 items-center">
-                <td class="text-[#0039A6] w-[10%] font-avenir-book text-left pl-2">S/N</td>
-                <td class="text-[#0039A6] w-[40%] font-avenir-book text-left">Customer Details</td>
-                <td class="text-[#0039A6] w-[30%] font-avenir-book text-left">Data Initiated</td>
-                <td class="text-[#0039A6] w-[20%] font-avenir-book text-left ">Status of Request</td>
+                <td class="text-[#0039A6] w-[5%] font-avenir-book text-left pl-2">S/N</td>
+                <td class="text-[#0039A6] w-[20%] font-avenir-book text-left">Customer Details</td>
+                <td class="text-[#0039A6] w-[20%] font-avenir-book text-left">Type of Data</td>
+                <td class="text-[#0039A6] w-[20%] font-avenir-book text-left ">Data Validity Period</td>
+                <td class="text-[#0039A6] w-[20%] font-avenir-book text-left ">Consent Date</td>
+                <td class="text-[#0039A6] w-[15%] font-avenir-book text-left ">Consent Status</td>
+
                 </tr>
        </th>
        <tbody class="w-full rounded-md ">
-        <tr class="flex gap-2 items-center border-b" *ngFor="let  customer of customerDetails; let i = index">
-            <td class="py-8 font-avenir-book pl-2 w-[10%]">{{customer.index}}</td>
-            <td class="w-[40%] font-avenir-book">{{customer.customerDetails}}</td>
-            <td class="w-[30%] font-avenir-book">{{customer.date}}</td>
-            <td class=" bg-[#CBFFAE] font-avenir-book text-[#067306] rounded-md text-center px-2 py-1 w-fit" [ngClass]="{'bg-[#FFE6B0] text-[#946300]' : customer.statusOfRequest=== 'Pending' , 'bg-[#FFABE8] text-[#9E0038]' : customer.statusOfRequest=== 'Rejected'}">{{customer.statusOfRequest}}</td>
+        <tr class="flex gap-2 items-center border-b" *ngFor="let data of customerData; let number = index ">
+            <td class="py-8 font-avenir-book text-[#4B5466] pl-2 w-[5%]">{{number+1}}</td>
+            <td class="w-[20%] font-avenir-book text-[#4B5466]">
+                <p>{{data.customerName}}</p>
+                <p>{{data.customerAccountNo}}</p>
+            </td>
+            <td class="w-[20%] font-avenir-book text-[#4B5466]">{{data.typeOfData}}</td>
+            <td class="w-[20%] font-avenir-book text-[#4B5466] " >{{data.validityPeriod}}</td>
+            <td class=" w-[20%] font-avenir-book text-[#4B5466]">{{data.consentDate}}</td>
+            <td class=" px-2 py-1 w-fit bg-[#CBFFAE] font-avenir-book text-[#067306] rounded-md text-center" [ngClass]="{'bg-[#FFE6B0] text-[#946300] ': data.consentStatus === 'pending'}">{{data.consentStatus}}</td>
         </tr>
        </tbody>
        </table>
         
         <div class="flex  py-4 px-6 mt-3 items-center">
-        <mat-paginator  [length]="customerDetails.length" [pageSizeOptions]="[10, 60, 40, 20, 10]">
+            
+        <mat-paginator  [length]="customerData.length" [pageSizeOptions]="[10, 60, 40, 20, 10]">
         </mat-paginator>  
+        
         </div>
             
     </div>

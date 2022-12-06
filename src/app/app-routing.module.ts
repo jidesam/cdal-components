@@ -6,7 +6,11 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   
   { path: '', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
-  { path: 'main', loadChildren: () => import('./main/main.module').then(m => m.MainModule) }
+  { path: 'main', loadChildren: () => import('./main/main.module').then(m => m.MainModule) },
+  
+  { path: 'fiu', loadChildren: () => import('./fiu/fiu.module').then(m => m.FiuModule) },
+  
+ 
 ];
 
 @NgModule({
