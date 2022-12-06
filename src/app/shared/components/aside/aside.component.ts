@@ -12,7 +12,10 @@ import { NavLinks } from '../nav-links';
 })
 export class AsideComponent implements OnInit {
 
+  
+
   @Input() navLink! : NavLinks[] 
+  @Input() showUpgradePlans : boolean = false
 
   @Output() logOutFunction = new EventEmitter
 
