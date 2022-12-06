@@ -19,7 +19,7 @@ export class FipComponent implements OnInit {
     },
      {
       link : 'Report',
-      routes: '',
+      routes: '/fip/generate-report',
       activeIcon : '',
       icon : ''
     }
